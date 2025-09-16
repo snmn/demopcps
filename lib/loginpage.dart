@@ -10,8 +10,9 @@ class loginpage extends StatefulWidget{
 class loginpageState extends State<loginpage>{
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    var size = MediaQuery.of(context).size; // screen size
    return Scaffold(
+
      body: Container(
        width: size.width,
        child: Column(
