@@ -1,3 +1,4 @@
+import 'package:demopcps/dashboard.dart';
 import 'package:demopcps/demoA.dart';
 import 'package:demopcps/democlass1.dart';
 import 'package:demopcps/democlass2.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  loginpage(),
+      home:  dashboard(),
     );
   }
 }
