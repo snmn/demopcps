@@ -42,6 +42,61 @@ class _dashboardState extends State<dashboard> {
       ],
     );
   }
+
+  verticalCard(size,heading,date, buttontext){
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              Container(
+                height: 100,
+                width: 120,
+                margin: EdgeInsets.only(right: 20),
+                decoration: BoxDecoration(color: Colors.green,
+                    borderRadius: BorderRadius.circular(15)
+                ),
+              ),
+              Positioned(left: 40,top: 25,child:Icon(Icons.play_circle,color: Colors.white,size: 40,))
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                width: size.width/2,
+                child: Text(heading,style: TextStyle(
+                    fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold
+                ),overflow: TextOverflow.ellipsis,maxLines: 2,),
+              ),
+              SizedBox(height: 20,),
+              Container(
+                width: size.width/2,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(15)
+                      ),
+                      padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+                      child: Text(buttontext,style: TextStyle(color: Colors.white),),
+                    ),
+                    Text(date,style: TextStyle(color: Colors.black),),
+                  ],
+                ),
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -64,39 +119,10 @@ class _dashboardState extends State<dashboard> {
           SingleChildScrollView(
             child: Column(
               children: [
-
-                Row(
-                  children: [
-                    Stack(
-                      children: [
-                        Container(
-                          height: 100,
-                          width: 120,
-                          decoration: BoxDecoration(color: Colors.green),
-                        ),
-                        Icon(Icons.play_circle,color: Colors.white,size: 40,)
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Text("Heading 1"),
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(15)
-                              ),
-                              padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
-                              child: Text("button",style: TextStyle(color: Colors.white),),
-                            ),
-                            Text("sept 10 2025",style: TextStyle(color: Colors.black),),
-                          ],
-                        )
-                      ],
-                    )
-                  ],
-                )
+                verticalCard(size, "Today is holiday Today is sunday Today is sunday", "10th sept 2025", "Click here"),
+                verticalCard(size, "Today is sunday", "10th sept 2025", "Click here"),
+                verticalCard(size, "Today is monday", "10th sept 2025", "Click here"),
+                verticalCard(size, "Today is tuesday", "10th sept 2025", "Click here")
               ],
             ),
           )
