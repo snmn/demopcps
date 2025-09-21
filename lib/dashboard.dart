@@ -1,3 +1,4 @@
+import 'package:demopcps/detailpage.dart';
 import 'package:flutter/material.dart';
 
 class dashboard extends StatefulWidget {
@@ -10,60 +11,69 @@ class dashboard extends StatefulWidget {
 class _dashboardState extends State<dashboard> {
 
   verticalCard (size, heading, date, actionbutton){
-    return Container(
-      margin: EdgeInsets.only(left: 15,top: 15),
-      child: Row(
-        children: [
-          Stack(
-            children: [
-              Container(
-                height: 100,
-                width: 150,
-                decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(15)
-                ),
-              ),
-              Positioned(
-                  left: 50,
-                  top: 25,
-                  child: Icon(Icons.play_circle,color: Colors.white,size: 40,))
-            ],
+    return GestureDetector(
+      onTap: (){
+        Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (context) => detailPage(),
           ),
-          SizedBox(width: 10,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: size.width/2,
-                child: Text(heading,
-                  style: TextStyle(color: Colors.black,
-                      fontWeight: FontWeight.bold,fontSize: 20),
-                  overflow: TextOverflow.visible
-                  ,maxLines: 2,),
-              ),
-              SizedBox(height: 15,),
-              Row(
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
-                    decoration: BoxDecoration(color: Colors.red,
-                        borderRadius: BorderRadius.circular(15)),
-                    child:  Text(actionbutton,
-                      style: TextStyle(color: Colors.white,
-                          fontWeight: FontWeight.bold,fontSize: 12),),
+        );
+      },
+      child: Container(
+        margin: EdgeInsets.only(left: 15,top: 15),
+        child: Row(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  height: 100,
+                  width: 150,
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(15)
                   ),
-                  SizedBox(width: 15,),
-                  Text(date,
+                ),
+                Positioned(
+                    left: 50,
+                    top: 25,
+                    child: Icon(Icons.play_circle,color: Colors.white,size: 40,))
+              ],
+            ),
+            SizedBox(width: 10,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: size.width/2,
+                  child: Text(heading,
                     style: TextStyle(color: Colors.black,
-                        fontWeight: FontWeight.bold,fontSize: 12),),
-                ],
-              )
+                        fontWeight: FontWeight.bold,fontSize: 20),
+                    overflow: TextOverflow.visible
+                    ,maxLines: 2,),
+                ),
+                SizedBox(height: 15,),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+                      decoration: BoxDecoration(color: Colors.red,
+                          borderRadius: BorderRadius.circular(15)),
+                      child:  Text(actionbutton,
+                        style: TextStyle(color: Colors.white,
+                            fontWeight: FontWeight.bold,fontSize: 12),),
+                    ),
+                    SizedBox(width: 15,),
+                    Text(date,
+                      style: TextStyle(color: Colors.black,
+                          fontWeight: FontWeight.bold,fontSize: 12),),
+                  ],
+                )
 
-            ],
-          )
+              ],
+            )
 
-        ],
+          ],
+        ),
       ),
     );
   }
