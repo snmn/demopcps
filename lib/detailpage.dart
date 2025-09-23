@@ -22,7 +22,10 @@ class _detailpageState extends State<detailpage> {
               color: Colors.white,size: 50,)),
           ),
           Positioned(left: 15,top: 15,
-              child: Icon(Icons.arrow_back,color: Colors.white,size: 30,)),
+              child: GestureDetector(
+              onTap: (){
+                Navigator.pop(context);
+              },child: Icon(Icons.arrow_back,color: Colors.white,size: 30,))),
           Positioned(right: 15,top: 15,
             child: Icon(Icons.share,color: Colors.white,size: 30,),)
         ],
