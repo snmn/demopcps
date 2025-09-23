@@ -1,46 +1,73 @@
-import 'package:demopcps/detailpage.dart';
 import 'package:flutter/material.dart';
 
-class dashboard extends StatefulWidget {
-  const dashboard({super.key});
+class detailpage extends StatefulWidget {
+  const detailpage({super.key});
 
   @override
-  State<dashboard> createState() => _dashboardState();
+  State<detailpage> createState() => _detailpageState();
 }
 
-class _dashboardState extends State<dashboard> {
-  
-  horizontalcard(size,heading,date){
-    return Stack(
-      children: [
-        Container(
-          height: size.height/5,
-          width: size.width/1.5,
-          margin: EdgeInsets.only(left: 10),
-          decoration: BoxDecoration(
-              color: Colors.green,
-              borderRadius: BorderRadius.circular(15)
+class _detailpageState extends State<detailpage> {
+
+  headingpart(size){
+    return Column(
+    children: [
+      Stack(
+        children: [
+          Container(
+            height: size.height/3,
+            width: size.width,
+            color: Colors.green,
+            child: Center(child: Icon(Icons.play_circle,
+              color: Colors.white,size: 50,)),
           ),
-        ),
-        Positioned(
-            bottom: 15,
-            left: 15,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          Positioned(left: 15,top: 15,
+              child: Icon(Icons.arrow_back,color: Colors.white,size: 30,)),
+          Positioned(right: 15,top: 15,
+            child: Icon(Icons.share,color: Colors.white,size: 30,),)
+        ],
+      ),
+      SizedBox(height: 15,),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: EdgeInsets.all(15),
+            child: Text("This is dashain at pcps "
+                "college and we are leaving home".toUpperCase()
+              ,style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,
+                  fontSize: 20),),
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 15,right: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(heading,style: TextStyle(color: Colors.white
-                    ,fontSize: 18,fontWeight: FontWeight.bold),),
-                Text(date,style: TextStyle(color: Colors.white
-                    ,fontSize: 14,fontWeight: FontWeight.bold),)
+                Text("Author Name"),
+                Text("25th Sept 2025")
               ],
-            )),
-        Positioned(
-            right: 15,
-            bottom: 15,
-            child: Icon(
-              Icons.play_circle,color: Colors.white,size: 30,
-            ))
-      ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(15),
+            child: Text("This is dashain at pcps "
+                "college and we are leaving home"
+                "This is dashain at pcps "
+                "college and we are leaving home"
+                "This is dashain at pcps "
+                "college and we are leaving home"
+                "This is dashain at pcps "
+                "college and we are leaving home"
+                "This is dashain at pcps "
+                "college and we are leaving home"
+                "This is dashain at pcps "
+                "college and we are leaving home"
+              ,style: TextStyle(color: Colors.black,fontWeight: FontWeight.normal,
+                  fontSize: 14),),
+          ),
+        ],
+      )
+    ],
     );
   }
 
@@ -111,25 +138,15 @@ class _dashboardState extends State<dashboard> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-     // appBar:  AppBar(),
-      body: Column(
-        children: [
-          SizedBox(height: 60,),
-          SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
+      body: Container(
+        height: size.height,
+
+        child: SingleChildScrollView(
+          child: Column(
             children: [
-              horizontalcard(size,"This is PCPS","sept 5 2025"),
-              horizontalcard(size,"NEWS 245","sept 6 2025"),
-              horizontalcard(size, "HI HOW ARE YOU","sept 7 2025"),
-              horizontalcard(size, "Happy holidays","sept 8 2025")
-            ],
-          ),
-        ),
-          Container(
-            height: size.height/1.4,
-            child: SingleChildScrollView(
-              child: Column(
+              SizedBox(height: 45,),
+              headingpart(size),
+              Column(
                 children: [
                   verticalCard(size, "Today is holiday Today is sunday Today is sunday", "10th sept 2025", "Click here"),
                   verticalCard(size, "Today is sunday", "10th sept 2025", "Click here"),
@@ -144,10 +161,9 @@ class _dashboardState extends State<dashboard> {
 
                 ],
               ),
-            ),
-          )
-
-        ],
+            ],
+          ),
+        ),
       ),
     );
   }
