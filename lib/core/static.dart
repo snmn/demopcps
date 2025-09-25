@@ -80,7 +80,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/de5ac8ed2da8f43c",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:40:23Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+755 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+755 chars]"
     },
     {
       "source": {
@@ -93,7 +93,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/e31b6fb611786bed",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:40:22Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+753 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+753 chars]"
     },
     {
       "source": {
@@ -106,7 +106,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/c3bb784ad6c588f1",
       "urlToImage": "https://biztoc.com/cdn/c3bb784ad6c588f1_s.webp",
       "publishedAt": "2025-09-23T23:40:19Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+757 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+757 chars]"
     },
     {
       "source": {
@@ -119,7 +119,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/ecaac6c679512154",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:40:18Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+750 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+750 chars]"
     },
     {
       "source": {
@@ -132,7 +132,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/62f2a05da5d25996",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:39:55Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+744 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+744 chars]"
     },
     {
       "source": {
@@ -145,7 +145,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/132bfa5b7c70bb1a",
       "urlToImage": "https://biztoc.com/cdn/132bfa5b7c70bb1a_s.webp",
       "publishedAt": "2025-09-23T23:39:52Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+751 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+751 chars]"
     },
     {
       "source": {
@@ -158,7 +158,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/ef9479b14c758db5",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:39:39Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+778 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+778 chars]"
     },
     {
       "source": {
@@ -167,7 +167,7 @@ class StaticValue{
       },
       "author": "Iain Thomson",
       "title": "Boffins fool a self-driving car by putting mirrors on traffic cones",
-      "description": "21st century tech confused by $100 of shiny stuff Mirrors can fool the Light Detection and Ranging (LIDAR) sensors used to guide autonomous vehicles by making them detect objects that don’t exist, or failing to detect actual obstacles.…",
+      "description": "21st century tech confused by   100 of shiny stuff Mirrors can fool the Light Detection and Ranging (LIDAR) sensors used to guide autonomous vehicles by making them detect objects that don’t exist, or failing to detect actual obstacles.…",
       "url": "https://www.theregister.com/2025/09/23/selfdriving_car_fooled_with_mirrors/",
       "urlToImage": "https://regmedia.co.uk/2022/02/11/shutterstock_self_driving_car.jpg",
       "publishedAt": "2025-09-23T23:29:26Z",
@@ -184,7 +184,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/32744f3057012862",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:28:42Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+745 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+745 chars]"
     },
     {
       "source": {
@@ -197,7 +197,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/3cf14c7eac1b6e66",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:28:26Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+767 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+767 chars]"
     },
     {
       "source": {
@@ -210,7 +210,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/98aaafe74205958b",
       "urlToImage": "https://biztoc.com/cdn/98aaafe74205958b_s.webp",
       "publishedAt": "2025-09-23T23:28:25Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+764 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+764 chars]"
     },
     {
       "source": {
@@ -223,7 +223,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/1509cdb86634e282",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:17:23Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+805 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+805 chars]"
     },
     {
       "source": {
@@ -236,7 +236,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/30055fdbc0358a24",
       "urlToImage": "https://biztoc.com/cdn/30055fdbc0358a24_s.webp",
       "publishedAt": "2025-09-23T23:17:20Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+763 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+763 chars]"
     },
     {
       "source": {
@@ -249,7 +249,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/25d872bcb6a0e4ba",
       "urlToImage": "https://biztoc.com/cdn/25d872bcb6a0e4ba_s.webp",
       "publishedAt": "2025-09-23T23:17:14Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+757 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+757 chars]"
     },
     {
       "source": {
@@ -262,7 +262,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/8662e8c08d40fd4d",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:17:13Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+838 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+838 chars]"
     },
     {
       "source": {
@@ -275,7 +275,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/e11075b60c41dab8",
       "urlToImage": "https://biztoc.com/cdn/e11075b60c41dab8_s.webp",
       "publishedAt": "2025-09-23T23:17:01Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+747 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+747 chars]"
     },
     {
       "source": {
@@ -288,7 +288,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/7080bc2b0efc79fe",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T23:05:52Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+725 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+725 chars]"
     },
     {
       "source": {
@@ -301,7 +301,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/4882711b1be228c4",
       "urlToImage": "https://biztoc.com/cdn/4882711b1be228c4_s.webp",
       "publishedAt": "2025-09-23T23:05:46Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+758 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+758 chars]"
     },
     {
       "source": {
@@ -314,7 +314,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/d298403375e6e8fa",
       "urlToImage": "https://biztoc.com/cdn/d298403375e6e8fa_s.webp",
       "publishedAt": "2025-09-23T23:05:34Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+733 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+733 chars]"
     },
     {
       "source": {
@@ -327,7 +327,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/97a4f7f1698b0f7b",
       "urlToImage": "https://biztoc.com/cdn/97a4f7f1698b0f7b_s.webp",
       "publishedAt": "2025-09-23T23:05:30Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+749 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+749 chars]"
     },
     {
       "source": {
@@ -379,7 +379,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/8490f85f7597ff3e",
       "urlToImage": "https://biztoc.com/cdn/8490f85f7597ff3e_s.webp",
       "publishedAt": "2025-09-23T22:54:41Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+756 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+756 chars]"
     },
     {
       "source": {
@@ -392,7 +392,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/3816204316716bcf",
       "urlToImage": "https://biztoc.com/cdn/3816204316716bcf_s.webp",
       "publishedAt": "2025-09-23T22:54:32Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+765 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+765 chars]"
     },
     {
       "source": {
@@ -405,7 +405,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/2772db7acf2c1a54",
       "urlToImage": "https://biztoc.com/cdn/2772db7acf2c1a54_s.webp",
       "publishedAt": "2025-09-23T22:54:31Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+760 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+760 chars]"
     },
     {
       "source": {
@@ -418,7 +418,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/c5aaad228c36bc93",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T22:54:27Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+731 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+731 chars]"
     },
     {
       "source": {
@@ -457,7 +457,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/9c143141c7bdb1ad",
       "urlToImage": "https://biztoc.com/cdn/9c143141c7bdb1ad_s.webp",
       "publishedAt": "2025-09-23T22:43:20Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+758 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+758 chars]"
     },
     {
       "source": {
@@ -470,7 +470,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/b891f1eb6e08624b",
       "urlToImage": "https://biztoc.com/cdn/b891f1eb6e08624b_s.webp",
       "publishedAt": "2025-09-23T22:43:19Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+757 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+757 chars]"
     },
     {
       "source": {
@@ -483,7 +483,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/a9e567a689d0348c",
       "urlToImage": "https://biztoc.com/cdn/a9e567a689d0348c_s.webp",
       "publishedAt": "2025-09-23T22:43:18Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+755 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+755 chars]"
     },
     {
       "source": {
@@ -496,7 +496,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/81dc06382f0dc0a7",
       "urlToImage": "https://biztoc.com/cdn/81dc06382f0dc0a7_s.webp",
       "publishedAt": "2025-09-23T22:43:06Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+756 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+756 chars]"
     },
     {
       "source": {
@@ -509,7 +509,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/7b4c8b1ff02a979b",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T22:31:48Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+767 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+767 chars]"
     },
     {
       "source": {
@@ -522,7 +522,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/3cad306805d250c1",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T22:20:48Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+751 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+751 chars]"
     },
     {
       "source": {
@@ -535,7 +535,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/e91d62861344d7ed",
       "urlToImage": "https://biztoc.com/cdn/e91d62861344d7ed_s.webp",
       "publishedAt": "2025-09-23T22:20:42Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+752 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+752 chars]"
     },
     {
       "source": {
@@ -548,7 +548,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/20f39d09b2335cc0",
       "urlToImage": "https://biztoc.com/cdn/20f39d09b2335cc0_s.webp",
       "publishedAt": "2025-09-23T22:20:31Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+717 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+717 chars]"
     },
     {
       "source": {
@@ -561,7 +561,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/c3b07115542cba5e",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T22:20:29Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+794 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+794 chars]"
     },
     {
       "source": {
@@ -587,7 +587,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/c4046030d2764d3b",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T22:09:50Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+705 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+705 chars]"
     },
     {
       "source": {
@@ -600,7 +600,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/a6f1669a764d63a6",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T22:09:49Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+701 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+701 chars]"
     },
     {
       "source": {
@@ -613,7 +613,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/6318b5e52c375934",
       "urlToImage": "https://biztoc.com/cdn/6318b5e52c375934_s.webp",
       "publishedAt": "2025-09-23T22:09:41Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+753 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+753 chars]"
     },
     {
       "source": {
@@ -626,7 +626,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/f3a22e4d8951b39b",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T22:09:29Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+699 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+699 chars]"
     },
     {
       "source": {
@@ -639,7 +639,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/0f20724e326982f9",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T22:09:27Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+732 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+732 chars]"
     },
     {
       "source": {
@@ -652,7 +652,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/22fee2ab04419c3c",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T22:09:20Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+713 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+713 chars]"
     },
     {
       "source": {
@@ -665,7 +665,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/a4b2ae45025f0c7d",
       "urlToImage": "https://biztoc.com/cdn/a4b2ae45025f0c7d_s.webp",
       "publishedAt": "2025-09-23T22:09:15Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+758 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+758 chars]"
     },
     {
       "source": {
@@ -691,7 +691,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/671079e2fb9710fb",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T21:58:26Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+739 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+739 chars]"
     },
     {
       "source": {
@@ -704,7 +704,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/fe7919aee00c1b8c",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T21:58:13Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+709 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+709 chars]"
     },
     {
       "source": {
@@ -717,7 +717,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/eacfa323878a23bf",
       "urlToImage": "https://biztoc.com/cdn/eacfa323878a23bf_s.webp",
       "publishedAt": "2025-09-23T21:58:12Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+755 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+755 chars]"
     },
     {
       "source": {
@@ -730,7 +730,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/fcc8790110c89c37",
       "urlToImage": "https://biztoc.com/cdn/fcc8790110c89c37_s.webp",
       "publishedAt": "2025-09-23T21:58:05Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+711 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+711 chars]"
     },
     {
       "source": {
@@ -743,7 +743,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/2e20432c83f4ae4a",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T21:58:01Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+765 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+765 chars]"
     },
     {
       "source": {
@@ -756,7 +756,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/9cc9a2147ebc5668",
       "urlToImage": "https://biztoc.com/cdn/9cc9a2147ebc5668_s.webp",
       "publishedAt": "2025-09-23T21:47:17Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+764 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+764 chars]"
     },
     {
       "source": {
@@ -769,7 +769,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/025d624c667cd5f3",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T21:47:08Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+714 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+714 chars]"
     },
     {
       "source": {
@@ -782,7 +782,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/394785bf84bf345b",
       "urlToImage": "https://biztoc.com/cdn/394785bf84bf345b_s.webp",
       "publishedAt": "2025-09-23T21:47:04Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+757 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+757 chars]"
     },
     {
       "source": {
@@ -795,7 +795,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/1c9243fa94e4bc99",
       "urlToImage": "https://biztoc.com/cdn/1c9243fa94e4bc99_s.webp",
       "publishedAt": "2025-09-23T21:47:03Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+746 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+746 chars]"
     },
     {
       "source": {
@@ -808,7 +808,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/874622476015762b",
       "urlToImage": "https://biztoc.com/cdn/950/og.png",
       "publishedAt": "2025-09-23T21:47:03Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+742 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+742 chars]"
     },
     {
       "source": {
@@ -834,7 +834,7 @@ class StaticValue{
       "url": "https://biztoc.com/x/87eb11accde05a31",
       "urlToImage": "https://biztoc.com/cdn/87eb11accde05a31_s.webp",
       "publishedAt": "2025-09-23T21:46:37Z",
-      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing $100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's $100,000… [+739 chars]"
+      "content": "{ window.open(this.href, '_blank'); }, 200); return false;\"&gt;Why is Nvidia investing   100 billion in OpenAI? { window.open(this.href, '_blank'); }, 200); return false;\"&gt;How will Trump's   100,000… [+739 chars]"
     },
     {
       "source": {
@@ -894,12 +894,12 @@ class StaticValue{
         "name": "Electrek"
       },
       "author": "Peter Johnson",
-      "title": "Honda is slashing over $20,000 off the Prologue right now",
-      "description": "How about over $20,000 in savings on a new SUV? For the next week, Honda is currently offering over $20,000 off 2025 Prologue models with stackable savings.\n\n\n\n more…",
+      "title": "Honda is slashing over   20,000 off the Prologue right now",
+      "description": "How about over   20,000 in savings on a new SUV? For the next week, Honda is currently offering over   20,000 off 2025 Prologue models with stackable savings.\n\n\n\n more…",
       "url": "http://electrek.co/2025/09/23/honda-offering-over-20000-off-prologue-right-now/",
       "urlToImage": "https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2025/09/Honda-Prologue-20000-off.jpeg?resize=1200%2C628&quality=82&strip=all&ssl=1",
       "publishedAt": "2025-09-23T21:14:20Z",
-      "content": "How about over $20,000 in savings on a new SUV? For the next week, Honda is currently offering over $20,000 off 2025 Prologue models with stackable savings.\r\nHonda has made its electric SUV even more… [+3083 chars]"
+      "content": "How about over   20,000 in savings on a new SUV? For the next week, Honda is currently offering over   20,000 off 2025 Prologue models with stackable savings.\r\nHonda has made its electric SUV even more… [+3083 chars]"
     },
     {
       "source": {
@@ -946,12 +946,12 @@ class StaticValue{
         "name": "Yahoo Entertainment"
       },
       "author": "Ashley Lutz",
-      "title": "Oracle founder Larry Ellison has pledged to give away 95% of his $393B fortune—but sudden leadership changes fuel a mystery",
+      "title": "Oracle founder Larry Ellison has pledged to give away 95% of his   393B fortune—but sudden leadership changes fuel a mystery",
       "description": "Ellison has a history of changing his plans for distributing wealth.",
       "url": "https://finance.yahoo.com/news/oracle-founder-larry-ellison-pledged-201736287.html",
       "urlToImage": "https://s.yimg.com/ny/api/res/1.2/1zBmqFSgoDbLIqcKsKLSgg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/fortune_175/e1a4e6edafda2f20a4cb9c839c2962df",
       "publishedAt": "2025-09-23T20:17:36Z",
-      "content": "Oracle founder and potential TikTok overlord Larry Ellison’s current net worth is estimated at $393 billion, making him the second-richest person in the world in 2025, only behind Elon Musk. His fort… [+3007 chars]"
+      "content": "Oracle founder and potential TikTok overlord Larry Ellison’s current net worth is estimated at   393 billion, making him the second-richest person in the world in 2025, only behind Elon Musk. His fort… [+3007 chars]"
     },
     {
       "source": {
@@ -959,12 +959,12 @@ class StaticValue{
         "name": "Fortune"
       },
       "author": "Ashley Lutz",
-      "title": "Oracle founder Larry Ellison has pledged to give away 95% of his $393B fortune—but sudden leadership changes fuel a mystery",
+      "title": "Oracle founder Larry Ellison has pledged to give away 95% of his   393B fortune—but sudden leadership changes fuel a mystery",
       "description": "Ellison has a history of changing his plans for distributing wealth.",
       "url": "https://fortune.com/2025/09/23/oracle-founder-larry-ellison-pledged-give-away-95-percent-of-393b-fortune-leadership-changes-mystery/",
       "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2025/09/GettyImages-2197466221_06b3dd.jpg?resize=1200,600",
       "publishedAt": "2025-09-23T20:17:36Z",
-      "content": "Oracle founder and potential TikTok overlord Larry Ellisons current net worth is estimated at $393 billion, making him the second-richest person in the world in 2025, only behind Elon Musk. His fortu… [+2924 chars]"
+      "content": "Oracle founder and potential TikTok overlord Larry Ellisons current net worth is estimated at   393 billion, making him the second-richest person in the world in 2025, only behind Elon Musk. His fortu… [+2924 chars]"
     },
     {
       "source": {
@@ -1025,7 +1025,7 @@ class StaticValue{
       },
       "author": "kosmos_news",
       "title": "Рабочий завода Tesla подал в суд на компанию после «атаки» промышленного робота-манипулятора",
-      "description": "Мужчина требует возмещения ущерба в размере $51 млн после того, как робот «ударил» его по затылку. Механик даже потерял сознание.",
+      "description": "Мужчина требует возмещения ущерба в размере   51 млн после того, как робот «ударил» его по затылку. Механик даже потерял сознание.",
       "url": "https://overclockers.ru/blog/kosmos_news/show/239420/Rabochij-zavoda-Tesla-podal-v-sud-na-kompaniju-posle-ataki-promyshlennogo-robota-manipulyatora",
       "urlToImage": "https://overclockers.ru/st/legacy/blog/430228/690980_O.jpg",
       "publishedAt": "2025-09-23T19:59:10Z",
@@ -1081,7 +1081,7 @@ class StaticValue{
       "url": "https://economictimes.indiatimes.com/news/international/us/did-d4vd-cancel-hollywood-hills-house-lease-raided-by-lapd-teenager-celeste-rivas-case-d4vd-david-anthony-burk-actions-canceled-tour-conspiracy-theories-about-alter-ego-itami-impact-on-d4vds-career/articleshow/124077938.cms",
       "urlToImage": "https://img.etimg.com/thumb/msid-124077938,width-1200,height-630,imgsize-21500,overlay-economictimes/articleshow.jpg",
       "publishedAt": "2025-09-23T19:28:52Z",
-      "content": "Did D4vd cancel Hollywood Hills house lease raided by LAPD? The pop singer ended his $20,000 monthly rental after police searched the property in connection with the death of teenager Celeste Rivas. … [+4406 chars]"
+      "content": "Did D4vd cancel Hollywood Hills house lease raided by LAPD? The pop singer ended his   20,000 monthly rental after police searched the property in connection with the death of teenager Celeste Rivas. … [+4406 chars]"
     },
     {
       "source": {
@@ -1115,12 +1115,12 @@ class StaticValue{
         "name": "The Week Magazine"
       },
       "author": "theweekonlineeditors@futurenet.com (Joel Mathis, The Week US) , Joel Mathis, The Week US",
-      "title": "Who benefits from Trump’s new $100,000 H-1B visa fee?",
+      "title": "Who benefits from Trump’s new   100,000 H-1B visa fee?",
       "description": "American workers might see gains. But there are drawbacks.",
       "url": "https://theweek.com/business/economy/trump-new-h1b-visa-fee-benefits-drawbacks",
       "urlToImage": "https://cdn.mos.cms.futurecdn.net/n65tPxmNwkYjmb3ftLrN66.jpg",
       "publishedAt": "2025-09-23T19:13:30Z",
-      "content": "President Donald Trump has struck another blow against immigration. His White House has imposed a new $100,000 fee on H-1B visas that American companies use to bring top talent from overseas. Experts… [+3719 chars]"
+      "content": "President Donald Trump has struck another blow against immigration. His White House has imposed a new   100,000 fee on H-1B visas that American companies use to bring top talent from overseas. Experts… [+3719 chars]"
     },
     {
       "source": {
@@ -1237,7 +1237,7 @@ class StaticValue{
       "url": "https://www.notebookcheck.net/Nvidia-invests-in-trillion-dollar-robotaxi-AI-company-that-Nissan-says-beats-Tesla-FSD.1122100.0.html",
       "urlToImage": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc5/nissan-propilot-ai-self-driving-ariya-ev.jpg",
       "publishedAt": "2025-09-23T18:13:00Z",
-      "content": "After its massive $100 billion investment in OpenAI that goes after Google's Gemini and Elon Musk's Grok, Nvidia is gunning for the nascent robotaxi industry as well.\r\nA new $500 million investment i… [+2455 chars]"
+      "content": "After its massive   100 billion investment in OpenAI that goes after Google's Gemini and Elon Musk's Grok, Nvidia is gunning for the nascent robotaxi industry as well.\r\nA new   500 million investment i… [+2455 chars]"
     },
     {
       "source": {
@@ -1284,8 +1284,8 @@ class StaticValue{
         "name": "Electrek"
       },
       "author": "Reinette LeJeune",
-      "title": "Jackery Early Prime Day sale with up to 65% discounts + bonus savings from $129, EcoFlow 48-hour sale, Anker solar cams, more",
-      "description": "Headlining today’s Green Deals is Jackery’s Early Prime Big Deal Days sale that is taking up to 65% off power stations, solar generator bundles, and accessories, with bonus savings, free gifts, and more starting from $129. Among the offers, we spotted the Exp…",
+      "title": "Jackery Early Prime Day sale with up to 65% discounts + bonus savings from   129, EcoFlow 48-hour sale, Anker solar cams, more",
+      "description": "Headlining today’s Green Deals is Jackery’s Early Prime Big Deal Days sale that is taking up to 65% off power stations, solar generator bundles, and accessories, with bonus savings, free gifts, and more starting from   129. Among the offers, we spotted the Exp…",
       "url": "http://electrek.co/2025/09/23/jackery-early-prime-day-sale-from-129-ecoflow-anker-more/",
       "urlToImage": "https://i0.wp.com/electrek.co/wp-content/uploads/sites/3/2025/09/Jackery-Early-Prime-Big-Deal-Days-Sale-FI.png?resize=1200%2C628&quality=82&strip=all&ssl=1",
       "publishedAt": "2025-09-23T18:00:00Z",
