@@ -1,12 +1,6 @@
-import 'package:demopcps/dashboard.dart';
-import 'package:demopcps/demoA.dart';
-import 'package:demopcps/democlass1.dart';
-import 'package:demopcps/democlass2.dart';
-import 'package:demopcps/login.dart';
-import 'package:demopcps/loginpage.dart';
-import 'package:demopcps/signinpage.dart';
+import 'package:demopcps/views/news/dashboard.dart';
 import 'package:flutter/material.dart';
-import 'demo.dart';
+
 
 void main() {
   runApp(const MyApp());
