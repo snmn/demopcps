@@ -12,7 +12,7 @@ class dashboard extends StatefulWidget {
 
 class _dashboardState extends State<dashboard> {
 
-  verticalCard (size, heading, date, actionbutton){
+  verticalCard (size, heading, date, actionbutton, String url){
     return GestureDetector(
       onTap: (){
         Navigator.of(context).push(
@@ -31,8 +31,12 @@ class _dashboardState extends State<dashboard> {
                   height: 100,
                   width: 150,
                   decoration: BoxDecoration(
-                      color: Colors.green,
+                      color: Colors.black26,
                       borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.network(url ,fit: BoxFit.cover,),
                   ),
                 ),
                 Positioned(
@@ -57,17 +61,23 @@ class _dashboardState extends State<dashboard> {
                 Row(
                   children: [
                     Container(
+                      width: 100,
                       padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
                       decoration: BoxDecoration(color: Colors.red,
                           borderRadius: BorderRadius.circular(15)),
-                      child:  Text(actionbutton,
-                        style: TextStyle(color: Colors.white,
-                            fontWeight: FontWeight.bold,fontSize: 12),),
+                      child:  Center(
+                        child: Text(actionbutton,
+                          style: TextStyle(color: Colors.white,
+                              fontWeight: FontWeight.bold,fontSize: 12),maxLines: 1,),
+                      ),
                     ),
                     SizedBox(width: 15,),
-                    Text(date,
-                      style: TextStyle(color: Colors.black,
-                          fontWeight: FontWeight.bold,fontSize: 12),),
+                    Container(
+                      width: 60,
+                      child: Text(date,
+                        style: TextStyle(color: Colors.black,
+                            fontWeight: FontWeight.bold,fontSize: 12),maxLines: 1,),
+                    ),
                   ],
                 )
 
@@ -89,7 +99,7 @@ class _dashboardState extends State<dashboard> {
         margin: EdgeInsets.only(left: 10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            color: Colors.green
+            color: Colors.black26
         ),
         child:  ClipRRect(borderRadius: BorderRadius.circular(15),
             child: Image.network(url,fit: BoxFit.cover,)),
@@ -136,7 +146,7 @@ class _dashboardState extends State<dashboard> {
       body: Column(
         children: [
           SizedBox(height: 60,),
-          //future builder with switch case
+          //future builder with switch case for horizontal list
           FutureBuilder(
               future: _futurenewsapidata,
               builder: (context, AsyncSnapshot<newsapi?> snapshot) {
@@ -181,30 +191,53 @@ class _dashboardState extends State<dashboard> {
                 return const Center(child: CircularProgressIndicator());
               }),
 
+          //future builder with switch case for vertical list
+          FutureBuilder(
+              future: _futurenewsapidata,
+              builder: (context, AsyncSnapshot<newsapi?> snapshot) {
+                switch (snapshot.connectionState) {
+                  case ConnectionState.none:
+                  case ConnectionState.active:
+                  case ConnectionState.waiting:
+                  case ConnectionState.done:
+                    if (snapshot.hasData) {
+                      //get data
+                      newsapi? data = snapshot.data;
+                      List<Articles>? articledata = data!.articles!;
+                      return Container(
+                        height: size.height/1.4,
+                        child: ListView.builder(
+                            scrollDirection: Axis.vertical,
+                            padding: EdgeInsets.zero,
+                            itemCount: articledata.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return verticalCard(size,
+                                  articledata[index].title,
+                                 articledata[index].publishedAt
+                                  , articledata[index].source!.name!,
+                               articledata[index].urlToImage!
+                              );
+                            }
+                        ),
+                      );
+                      //       return SingleChildScrollView(
+                      //       scrollDirection: Axis.horizontal,
+                      //       child: Row(
+                      // children: [
+                      // horizontalCard(size, "This is the best news", "10th Sept 2025"),
+                      // horizontalCard(size, "PCPS day", "5th Sept 2025"),
+                      // horizontalCard(size, "Dashian in near", "1st Sept 2025"),
+                      // horizontalCard(size, "This is the best news", "12th Sept 2025"),
+                      // ],
+                      // ),
+                      // );
+                    }
+                }
+                // By default, show a loading spinner
+                return const Center(child: CircularProgressIndicator());
+              }),
 
-          Container(
-            height: size.height/1.4,
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                      , "www.pcps.com"),
-                  verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                      , "www.pcps.com"),
-                  verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                      , "www.pcps.com"),
-                  verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                      , "www.pcps.com"),
-                  verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                      , "www.pcps.com"),
-                  verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                      , "www.pcps.com"),
-                  verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                      , "www.pcps.com")
-                ],
-              ),
-            ),
-          )
+
         ],
       ),
     );
