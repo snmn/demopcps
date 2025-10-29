@@ -1,4 +1,5 @@
 import 'package:demopcps/api/newsapicall.dart';
+import 'package:demopcps/model/newsapimodel.dart';
 import 'package:demopcps/newsapp/detailpage.dart';
 import 'package:flutter/material.dart';
 
@@ -79,7 +80,7 @@ class _dashboardState extends State<dashboard> {
     );
   }
 
-  horizontalCard(size, heading, date){
+  horizontalCard(size, heading, date, String url){
   return Stack(
     children: [
       Container(
@@ -90,7 +91,10 @@ class _dashboardState extends State<dashboard> {
             borderRadius: BorderRadius.circular(15),
             color: Colors.green
         ),
+        child:  ClipRRect(borderRadius: BorderRadius.circular(15),
+            child: Image.network(url,fit: BoxFit.cover,)),
       ),
+
        Positioned(
         bottom: 20,
         left: 20,
@@ -114,12 +118,15 @@ class _dashboardState extends State<dashboard> {
     ],
   );
   }
-
+  Future<newsapi?>? _futurenewsapidata ;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    newsapicall().getnewsapidata();
+  apicall();
+  }
+  apicall(){
+  _futurenewsapidata =  (newsapicall().getnewsapidata());
   }
   @override
   Widget build(BuildContext context) {
@@ -129,17 +136,52 @@ class _dashboardState extends State<dashboard> {
       body: Column(
         children: [
           SizedBox(height: 60,),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                horizontalCard(size, "This is the best news", "10th Sept 2025"),
-                horizontalCard(size, "PCPS day", "5th Sept 2025"),
-                horizontalCard(size, "Dashian in near", "1st Sept 2025"),
-                horizontalCard(size, "This is the best news", "12th Sept 2025"),
-              ],
-            ),
-          ),
+          //future builder with switch case
+          FutureBuilder(
+              future: _futurenewsapidata,
+              builder: (context, AsyncSnapshot<newsapi?> snapshot) {
+                switch (snapshot.connectionState) {
+                  case ConnectionState.none:
+                  case ConnectionState.active:
+                  case ConnectionState.waiting:
+                  case ConnectionState.done:
+                    if (snapshot.hasData) {
+                      //get data
+                      newsapi? data = snapshot.data;
+                      List<Articles>? articledata = data!.articles!;
+                      return Container(
+                        height: size.height/5,
+                        child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            padding: EdgeInsets.zero,
+                            itemCount: articledata.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return horizontalCard(size,
+                                  articledata[index].title
+                                  , articledata[index].publishedAt,
+                              articledata[index].urlToImage!
+                              );
+                            }
+                        ),
+                      );
+                //       return SingleChildScrollView(
+                //       scrollDirection: Axis.horizontal,
+                //       child: Row(
+                // children: [
+                // horizontalCard(size, "This is the best news", "10th Sept 2025"),
+                // horizontalCard(size, "PCPS day", "5th Sept 2025"),
+                // horizontalCard(size, "Dashian in near", "1st Sept 2025"),
+                // horizontalCard(size, "This is the best news", "12th Sept 2025"),
+                // ],
+                // ),
+                // );
+                    }
+                }
+                // By default, show a loading spinner
+                return const Center(child: CircularProgressIndicator());
+              }),
+
+
           Container(
             height: size.height/1.4,
             child: SingleChildScrollView(
