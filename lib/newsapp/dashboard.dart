@@ -1,4 +1,5 @@
-import 'package:demopcps/detailpage.dart';
+import 'package:demopcps/api/newsapicall.dart';
+import 'package:demopcps/newsapp/detailpage.dart';
 import 'package:flutter/material.dart';
 
 class dashboard extends StatefulWidget {
@@ -114,7 +115,12 @@ class _dashboardState extends State<dashboard> {
   );
   }
 
-
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    newsapicall().getnewsapidata();
+  }
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
