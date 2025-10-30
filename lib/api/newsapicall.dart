@@ -15,7 +15,7 @@ class newsapicall{
     try{
       var url = Uri.https(staticfile.baseurl,
           staticfile.path,
-          {'q': 'tesla', 'from': "2025-10-27", "apiKey": staticfile.apikey});
+          {'q': 'tesla', 'from': "2025-10-29", "apiKey": staticfile.apikey});
       var response = await http.get(url);
       if (response.statusCode.toString().contains("20")) {
         var jsonResponse = convert.jsonDecode(response.body);

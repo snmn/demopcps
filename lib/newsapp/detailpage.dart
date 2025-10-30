@@ -1,5 +1,9 @@
+import 'package:demopcps/core/static.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
+import '../api/newsapicall.dart';
+import '../model/newsapimodel.dart';
 
 class detailPage extends StatefulWidget {
   const detailPage({super.key});
@@ -10,9 +14,11 @@ class detailPage extends StatefulWidget {
 
 class _detailPageState extends State<detailPage> {
 
-  verticalCard (size, heading, date, actionbutton){
+
+  verticalCard (size, heading, date, actionbutton, String url,Articles article){
     return GestureDetector(
       onTap: (){
+        staticfile.clickedarticle = article;
         Navigator.of(context).push(
           MaterialPageRoute<void>(
             builder: (context) => detailPage(),
@@ -29,8 +35,12 @@ class _detailPageState extends State<detailPage> {
                   height: 100,
                   width: 150,
                   decoration: BoxDecoration(
-                      color: Colors.green,
+                      color: Colors.black26,
                       borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.network(url ,fit: BoxFit.cover,),
                   ),
                 ),
                 Positioned(
@@ -55,17 +65,23 @@ class _detailPageState extends State<detailPage> {
                 Row(
                   children: [
                     Container(
+                      width: 100,
                       padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
                       decoration: BoxDecoration(color: Colors.red,
                           borderRadius: BorderRadius.circular(15)),
-                      child:  Text(actionbutton,
-                        style: TextStyle(color: Colors.white,
-                            fontWeight: FontWeight.bold,fontSize: 12),),
+                      child:  Center(
+                        child: Text(actionbutton,
+                          style: TextStyle(color: Colors.white,
+                              fontWeight: FontWeight.bold,fontSize: 12),maxLines: 1,),
+                      ),
                     ),
                     SizedBox(width: 15,),
-                    Text(date,
-                      style: TextStyle(color: Colors.black,
-                          fontWeight: FontWeight.bold,fontSize: 12),),
+                    Container(
+                      width: 60,
+                      child: Text(date,
+                        style: TextStyle(color: Colors.black,
+                            fontWeight: FontWeight.bold,fontSize: 12),maxLines: 1,),
+                    ),
                   ],
                 )
 
@@ -83,13 +99,16 @@ class _detailPageState extends State<detailPage> {
       children: [
         Stack(
           children: [
+            Image.network(staticfile.clickedarticle!.urlToImage!,
+              fit: BoxFit.fill,height: size.height/3.5,),
             Container(
-              color: Colors.green,
-              height: size.height/3,
+              color: Colors.black26,
+              height: size.height/3.5,
               width: size.width,
-              child: Icon(Icons.play_circle,size: 55,
+              child: const Icon(Icons.play_circle,size: 55,
                 color: Colors.white,),
             ),
+
             Positioned(
                 left: 20,top: 15
                 ,child: GestureDetector(
@@ -109,8 +128,7 @@ class _detailPageState extends State<detailPage> {
         Container(
           padding: EdgeInsets.all(15),
           child: Text(
-            "This is the class before dashain and we are "
-                "creating a news app and we are creating it".toUpperCase()
+           staticfile.clickedarticle!.title!.toUpperCase()
             ,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20)
             ,maxLines: 2,overflow: TextOverflow.ellipsis,),
         ),
@@ -119,26 +137,15 @@ class _detailPageState extends State<detailPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Author Name"),
-              Text("sept 25, 2025")
+              Text(staticfile.clickedarticle!.author!),
+              Text(staticfile.clickedarticle!.publishedAt!)
             ],
           ),
         ),
         Container(
           padding: EdgeInsets.all(15),
           child: Text(
-            "This is the class before dashain and we are "
-                "creating a news app and we are creating it "
-                "This is the class before dashain and we are "
-                "creating a news app and we are creating it"
-                "This is the class before dashain and we are "
-                "creating a news app and we are creating it"
-                "This is the class before dashain and we are "
-                "creating a news app and we are creating it"
-                "This is the class before dashain and we are "
-                "creating a news app and we are creating it"
-                "This is the class before dashain and we are "
-                "creating a news app and we are creating it"
+            staticfile.clickedarticle!.description!
             ,style: TextStyle(fontWeight: FontWeight.normal,fontSize: 12)
             ,maxLines: 5,overflow: TextOverflow.ellipsis,),
         ),
@@ -146,6 +153,16 @@ class _detailPageState extends State<detailPage> {
     );
   }
 
+  Future<newsapi?>? _futurenewsapidata ;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    apicall();
+  }
+  apicall(){
+    _futurenewsapidata =  (newsapicall().getnewsapidata());
+  }
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -157,20 +174,40 @@ class _detailPageState extends State<detailPage> {
             children: [
               SizedBox(height: 40,),
               headerCard(size),
-              verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                  , "www.pcps.com"),
-              verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                  , "www.pcps.com"),
-              verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                  , "www.pcps.com"),
-              verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                  , "www.pcps.com"),
-              verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                  , "www.pcps.com"),
-              verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                  , "www.pcps.com"),
-              verticalCard(size, "This is sunday and today is holiday", "25th Sept 2025"
-                  , "www.pcps.com")
+              FutureBuilder(
+                  future: _futurenewsapidata,
+                  builder: (context, AsyncSnapshot<newsapi?> snapshot) {
+                    switch (snapshot.connectionState) {
+                      case ConnectionState.none:
+                      case ConnectionState.active:
+                      case ConnectionState.waiting:
+                      case ConnectionState.done:
+                        if (snapshot.hasData) {
+                          //get data
+                          newsapi? data = snapshot.data;
+                          List<Articles>? articledata = data!.articles!;
+                          return Container(
+                            height: size.height/1.4,
+                            child: ListView.builder(
+                                scrollDirection: Axis.vertical,
+                                padding: EdgeInsets.zero,
+                                itemCount: articledata.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return verticalCard(size,
+                                      articledata[index].title,
+                                      articledata[index].publishedAt
+                                      , articledata[index].source!.name!,
+                                      articledata[index].urlToImage!,
+                                      articledata[index]
+                                  );
+                                }
+                            ),
+                          );
+                        }
+                    }
+                    // By default, show a loading spinner
+                    return const Center(child: CircularProgressIndicator());
+                  }),
             ],
           ),
         ),

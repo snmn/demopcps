@@ -1,4 +1,5 @@
 import 'package:demopcps/api/newsapicall.dart';
+import 'package:demopcps/core/static.dart';
 import 'package:demopcps/model/newsapimodel.dart';
 import 'package:demopcps/newsapp/detailpage.dart';
 import 'package:flutter/material.dart';
@@ -12,9 +13,10 @@ class dashboard extends StatefulWidget {
 
 class _dashboardState extends State<dashboard> {
 
-  verticalCard (size, heading, date, actionbutton, String url){
+  verticalCard (size, heading, date, actionbutton, String url,Articles article){
     return GestureDetector(
       onTap: (){
+        staticfile.clickedarticle = article;
         Navigator.of(context).push(
           MaterialPageRoute<void>(
             builder: (context) => detailPage(),
@@ -215,7 +217,8 @@ class _dashboardState extends State<dashboard> {
                                   articledata[index].title,
                                  articledata[index].publishedAt
                                   , articledata[index].source!.name!,
-                               articledata[index].urlToImage!
+                               articledata[index].urlToImage!,
+                                articledata[index]
                               );
                             }
                         ),
