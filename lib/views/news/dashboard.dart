@@ -62,7 +62,7 @@ class _dashboardState extends State<dashboard> {
     );
   }
 
-  verticalcard(size,heading,author, date){
+  verticalcard(size, String heading,author, date, String url ){
     return GestureDetector(
       onTap: (){
         Navigator.of(context).push(
@@ -85,7 +85,7 @@ class _dashboardState extends State<dashboard> {
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15),
-                      child: Image.network('https://picsum.photos/250?image=9',
+                      child: Image.network(url,
                         fit: BoxFit.cover,),
                     )),
                 Container(
@@ -119,16 +119,17 @@ class _dashboardState extends State<dashboard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
+                      width: 100,
                       margin: EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(
                           color: Colors.red,
                           borderRadius: BorderRadius.circular(15)
                       ),
                       padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
-                      child: Text(author,style: TextStyle(color: Colors.white),),
+                      child: Text(author,style: TextStyle(color: Colors.white),maxLines: 1,),
                     ),
                     SizedBox(width: 15,),
-                    Text(date,style: TextStyle(color: Colors.black),)
+                    Container(width: 80,child: Text(date,style: TextStyle(color: Colors.black),maxLines: 1,))
                   ],
                 )
               ],
@@ -189,27 +190,41 @@ class _dashboardState extends State<dashboard> {
               return const Center(child: CircularProgressIndicator());
             },
           ),
-
-          SizedBox(height: 20,),
           //vertical card
+          FutureBuilder(
+            future: _futurenewsapicall,
+            builder: (context, AsyncSnapshot<Newsapi?> snapshot) {
+              switch (snapshot.connectionState) {
+                case ConnectionState.none:
+                case ConnectionState.active:
+                case ConnectionState.waiting:
+                case ConnectionState.done:
+                  if(snapshot.hasData){
+                    //parse data
+                    Newsapi? data  = snapshot.data;
+                    List<Articles> articles = data!.articles!;
+                    return Container(
+                      height: size.height/1.4,
+                      child: ListView.builder(
+                        scrollDirection: Axis.vertical,
+                        itemCount: articles.length,
+                        padding: EdgeInsets.zero,
+                        itemBuilder: (BuildContext context, int index) {
+                          return verticalcard(size, articles[index].title!,
+                              articles[index].author,articles[index].publishedAt,
+                              articles[index].urlToImage!);
+                          //String heading,author, date, String url
+                        },
+                      ),
+                    );
+                  }else{
+                    return Text("No data available");
+                  }
+              }
+              return const Center(child: CircularProgressIndicator());
+            },
+          ),
 
-          Container(
-            height: size.height/1.4,
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  verticalcard(size, "This is monday", "pcps.com", "25 sept 2025"),
-                  verticalcard(size, "This is monday", "pcps.com", "25 sept 2025"),
-                  verticalcard(size, "This is monday", "pcps.com", "25 sept 2025"),
-                  verticalcard(size, "This is monday", "pcps.com", "25 sept 2025"),
-                  verticalcard(size, "This is monday", "pcps.com", "25 sept 2025"),
-                  verticalcard(size, "This is monday", "pcps.com", "25 sept 2025"),
-                  verticalcard(size, "This is monday", "pcps.com", "25 sept 2025"),
-                  verticalcard(size, "This is monday", "pcps.com", "25 sept 2025"),
-                ],
-              ),
-            ),
-          )
         ],
       ),
     );
