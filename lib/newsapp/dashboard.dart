@@ -92,42 +92,52 @@ class _dashboardState extends State<dashboard> {
     );
   }
 
-  horizontalCard(size, heading, date, String url){
-  return Stack(
-    children: [
-      Container(
-        height: size.height/5,
-        width: size.width/1.5,
-        margin: EdgeInsets.only(left: 10),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.black26
+  horizontalCard(size, heading, date, String url, Articles article){
+  return GestureDetector(
+    onTap: (){
+      staticfile.clickedarticle = article;
+      Navigator.of(context).push(
+        MaterialPageRoute<void>(
+          builder: (context) => detailPage(),
         ),
-        child:  ClipRRect(borderRadius: BorderRadius.circular(15),
-            child: Image.network(url,fit: BoxFit.cover,)),
-      ),
+      );
+    },
+    child: Stack(
+      children: [
+        Container(
+          height: size.height/5,
+          width: size.width/1.5,
+          margin: EdgeInsets.only(left: 10),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.black26
+          ),
+          child:  ClipRRect(borderRadius: BorderRadius.circular(15),
+              child: Image.network(url,fit: BoxFit.cover,)),
+        ),
 
-       Positioned(
-        bottom: 20,
-        left: 20,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(heading,
-              style: TextStyle(color: Colors.white,
-                  fontWeight: FontWeight.bold,fontSize: 16),),
-            Text(date,
-              style: TextStyle(color: Colors.white,
-                  fontSize: 14,fontWeight: FontWeight.normal),)
-          ],
+         Positioned(
+          bottom: 20,
+          left: 20,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(heading,
+                style: TextStyle(color: Colors.white,
+                    fontWeight: FontWeight.bold,fontSize: 16),),
+              Text(date,
+                style: TextStyle(color: Colors.white,
+                    fontSize: 14,fontWeight: FontWeight.normal),)
+            ],
+          ),
         ),
-      ),
-      Positioned(
-          right: 15,
-          bottom: 15,
-          child: Icon(Icons.play_circle,color: Colors.white,size: 30,)
-      )
-    ],
+        Positioned(
+            right: 15,
+            bottom: 15,
+            child: Icon(Icons.play_circle,color: Colors.white,size: 30,)
+        )
+      ],
+    ),
   );
   }
   Future<newsapi?>? _futurenewsapidata ;
@@ -171,7 +181,8 @@ class _dashboardState extends State<dashboard> {
                               return horizontalCard(size,
                                   articledata[index].title
                                   , articledata[index].publishedAt,
-                              articledata[index].urlToImage!
+                              articledata[index].urlToImage!,
+                                articledata[index]
                               );
                             }
                         ),

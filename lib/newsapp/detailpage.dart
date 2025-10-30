@@ -1,6 +1,7 @@
 import 'package:demopcps/core/static.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../api/newsapicall.dart';
 import '../model/newsapimodel.dart';
@@ -120,8 +121,16 @@ class _detailPageState extends State<detailPage> {
             )),
             Positioned(
                 right: 20,top: 15
-                ,child: Icon(Icons.share,
-              color: Colors.white,size: 25,)),
+                ,child: GestureDetector(
+              onTap: (){
+
+                Share.share(
+                    staticfile.clickedarticle!.urlToImage!)
+                ;
+              },
+                  child: Icon(Icons.share,
+                                color: Colors.white,size: 25,),
+                )),
 
           ],
         ),
@@ -138,7 +147,7 @@ class _detailPageState extends State<detailPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(staticfile.clickedarticle!.author!),
-              Text(staticfile.clickedarticle!.publishedAt!)
+              Text(staticfile.clickedarticle!.publishedAt!.split("T")[0].toString())
             ],
           ),
         ),
