@@ -1,3 +1,5 @@
+import 'package:demopcps/api/newsapicall.dart';
+import 'package:demopcps/model/newsapi.dart';
 import 'package:flutter/material.dart';
 
 import 'detailpage.dart';
@@ -11,7 +13,7 @@ class dashboard extends StatefulWidget {
 
 class _dashboardState extends State<dashboard> {
 
-  horizontalcard(size,heading, date){
+  horizontalcard(size,heading, date, String url){
     return  Stack(
       children: [
         Container(
@@ -24,7 +26,7 @@ class _dashboardState extends State<dashboard> {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
-              child: Image.network('https://picsum.photos/250?image=9',
+              child: Image.network(url,
                 fit: BoxFit.cover,opacity: const AlwaysStoppedAnimation(.7),),
             )),
         Container(
@@ -138,6 +140,17 @@ class _dashboardState extends State<dashboard> {
     );
   }
 
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    apicall();
+  }
+  Future<Newsapi?>? _futurenewsapicall;
+  apicall(){
+    _futurenewsapicall = newsApiCall().getapicall();
+  }
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -145,27 +158,37 @@ class _dashboardState extends State<dashboard> {
       body: Column(
         children: [
           SizedBox(height: 45,),
-         //horizontal card
-         //  Image.asset('../images/logo.png',
-         //    fit: BoxFit.cover,),
-         Container(
-           width: size.width,
-           child: SingleChildScrollView(
-             scrollDirection: Axis.horizontal,
-             child: Row(
-               children: [
-                 horizontalcard(size, "This is Norway news", " 25 Sept 2025"),
-                 horizontalcard(size, "This is PCPS LAB for news articles, "
-                     "This is PCPS LAB for news articles,", " 25 Sept 2025"),
-                 horizontalcard(size, "This is sunday", " 25 Sept 2025"),
-                 horizontalcard(size, "This is PCPS LAB for news articles, "
-                     "This is PCPS LAB for news articles,", " 25 Sept 2025"),
-                 horizontalcard(size, "This is PCPS LAB for news articles, "
-                     "This is PCPS LAB for news articles,", " 25 Sept 2025")
-               ],
-             ),
-           ),
-         ),
+          FutureBuilder(
+            future: _futurenewsapicall,
+            builder: (context, AsyncSnapshot<Newsapi?> snapshot) {
+              switch (snapshot.connectionState) {
+                case ConnectionState.none:
+                case ConnectionState.active:
+                case ConnectionState.waiting:
+                case ConnectionState.done:
+                  if(snapshot.hasData){
+                    //parse data
+                    Newsapi? data  = snapshot.data;
+                    List<Articles> articles = data!.articles!;
+                    return Container(
+                      height: size.height/5,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: articles.length,
+                        itemBuilder: (BuildContext context, int index) {
+                         return horizontalcard(size, articles[index].title,
+                             articles[index].publishedAt,
+                             articles[index].urlToImage!);
+                        },
+                      ),
+                    );
+                  }else{
+                    return Text("No data available");
+                  }
+              }
+              return const Center(child: CircularProgressIndicator());
+            },
+          ),
 
           SizedBox(height: 20,),
           //vertical card
