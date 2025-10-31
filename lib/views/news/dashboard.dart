@@ -1,4 +1,5 @@
 import 'package:demopcps/api/newsapicall.dart';
+import 'package:demopcps/core/static.dart';
 import 'package:demopcps/model/newsapi.dart';
 import 'package:flutter/material.dart';
 
@@ -62,9 +63,11 @@ class _dashboardState extends State<dashboard> {
     );
   }
 
-  verticalcard(size, String heading,author, date, String url ){
+  verticalcard(size, String heading,author, date, String url,
+      Articles? article ){
     return GestureDetector(
       onTap: (){
+        StaticValue.clickedarticle = article;
         Navigator.of(context).push(
           MaterialPageRoute<void>(
             builder: (context) => detailpage(),
@@ -118,7 +121,7 @@ class _dashboardState extends State<dashboard> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
+                    author == ""?Container():Container(
                       width: 100,
                       margin: EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(
@@ -212,7 +215,8 @@ class _dashboardState extends State<dashboard> {
                         itemBuilder: (BuildContext context, int index) {
                           return verticalcard(size, articles[index].title!,
                               articles[index].author,articles[index].publishedAt,
-                              articles[index].urlToImage!);
+                              articles[index].urlToImage!,
+                              articles[index]);
                           //String heading,author, date, String url
                         },
                       ),
