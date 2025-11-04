@@ -1,7 +1,6 @@
 import 'package:demopcps/views/chatapp/Chats.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:demopcps/firebase_options.dart';
+
 
 class Conversations extends StatefulWidget {
   const Conversations({super.key});
@@ -49,14 +48,7 @@ class _ConversationsState extends State<Conversations> {
       ),
     );
   }
-  @override
-  Future<void> initState() async {
-    // TODO: implement initState
-    super.initState();
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
