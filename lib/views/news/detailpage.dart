@@ -119,6 +119,7 @@ class _detailpageState extends State<detailpage> {
             Container(
               height: size.height/3.5,
               width: size.width,
+
               color: Colors.transparent,
               child: Center(
                 child: Icon(Icons.play_circle,color: Colors.white,size: 50,),
