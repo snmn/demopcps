@@ -39,6 +39,8 @@ dependencies:
   http: ^1.0.5
   firebase_core:
   cloud_firestore:
+  google_maps_flutter: ^2.14.0
+
 
 dev_dependencies:
   flutter_test:
