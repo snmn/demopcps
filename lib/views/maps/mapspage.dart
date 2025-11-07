@@ -42,6 +42,7 @@ class MapSampleState extends State<MapsPage> {
     return Scaffold(
       body: GoogleMap(
         mapType: MapType.normal,
+        style: _maptheme,
         initialCameraPosition: _kGooglePlex,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
