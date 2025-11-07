@@ -10,28 +10,36 @@ class Chats extends StatefulWidget {
 
 class _ChatsState extends State<Chats> {
   late TextEditingController _controller;
-  String chatId = "123";
-  String currentUserId = "456";
-  String otherUserId = "789";
+  String chatId = "1234";
+  String currentUserId = "789";
+  String otherUserId= "456";
+
   sendMessage(String text) async {
-   final ref =  FirebaseFirestore.instance
+    final messageref = FirebaseFirestore.instance
         .collection('chats')
         .doc(chatId)
         .collection('messages')
         .doc();
-   await ref.set({
-     'senderId': currentUserId,
-     'text': text.trim(),
-     'timestamp': FieldValue.serverTimestamp(),
-   });
-    await FirebaseFirestore.instance
-        .collection('chats')
-   .doc(chatId).update({
+    await messageref.set({
+      'senderId': currentUserId,
+      'text': text.trim(),
+      'timestamp': FieldValue.serverTimestamp()
+    });
+    await FirebaseFirestore.instance.collection('chats')
+    .doc(chatId).update({
       'lastMessage': text.trim(),
       'lastUpdated': FieldValue.serverTimestamp(),
-   });
+    });
   }
 
+  Stream<QuerySnapshot>getMessages(){
+    return FirebaseFirestore.instance
+        .collection('chats')
+        .doc(chatId)
+        .collection('messages')
+        .orderBy('timestamp',descending: false)
+        .snapshots();
+  }
   @override
   void initState() {
     super.initState();
@@ -62,29 +70,28 @@ class _ChatsState extends State<Chats> {
                     color: Colors.black,),
                 ),
               ),
-              //stream builder
+
               StreamBuilder<QuerySnapshot>(
-                  stream: stream,
-                  builder: (context, snapshot){
-                    if(snapshot.connectionState
-                        == ConnectionState.waiting){
+                  stream: getMessages(),
+                  builder: (context,snapshot){
+                    if(snapshot.connectionState == ConnectionState.waiting){
                       return const CircularProgressIndicator();
                     }
                     if(!snapshot.hasData || snapshot.data!.docs.isEmpty){
-                      return Text("No data");
+                      return const Text("No data available");
                     }
                     final messages = snapshot.data!.docs;
                     return Container(
-                      width: size.width,
                       height: size.height/3,
+                      width: size.width,
                       child: ListView.builder(
                         padding: EdgeInsets.only(bottom: 10),
                           itemCount: messages.length,
-                          itemBuilder: (context, index){
+                          itemBuilder: (context,index){
                           var msg = messages[index];
                           final isMe = msg['senderId'] == currentUserId;
                           return isMe?
-                          //show right side
+                              //right side
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
@@ -95,11 +102,12 @@ class _ChatsState extends State<Chats> {
                                       color: Colors.black54,
                                       borderRadius: BorderRadius.circular(15)
                                   ),
-                                  child: Text("Hey mate,",
+                                  child: Text(  msg['text'],
                                     style: TextStyle(color: Colors.white),))
                             ],
-                          )  :
-                            //show left side'
+                          )
+                              :
+                          //left
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
@@ -110,20 +118,18 @@ class _ChatsState extends State<Chats> {
                                       color: Colors.grey,
                                       borderRadius: BorderRadius.circular(15)
                                   ),
-                                  child: Text("Hi how are you.",
+                                  child: Text(  msg['text'],
                                     style: TextStyle(color: Colors.white),))
                             ],
                           )
                           ;
-                          }
-                      ),
+                          }),
                     );
-                  }),
+
+                  })
+
               //left side item
-
               //right side item
-
-
             ],
           ),
           //Textfield
@@ -138,12 +144,12 @@ class _ChatsState extends State<Chats> {
                     controller: _controller,
                     style: TextStyle(color: Colors.white,),
                     maxLines: 1,
-                    onSubmitted: (var abc){
-                      sendMessage(abc);
-                      setState(() {
-                        _controller.clear();
-                      });
-                    },
+                    // onSubmitted: (var abc){
+                    //   sendMessage(abc);
+                    //   setState(() {
+                    //     _controller.clear();
+                    //   });
+                    // },
                     onEditingComplete: (){
                       var abc = _controller.text;
                       sendMessage(abc);
