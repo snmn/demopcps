@@ -1,20 +1,24 @@
-import 'dart:async';
+import 'dart:async' show Completer;
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class MapsApp extends StatefulWidget {
-  const MapsApp({super.key});
+class MapsPage extends StatefulWidget {
+  const MapsPage({super.key});
 
   @override
-  State<MapsApp> createState() => MapSampleState();
+  State<MapsPage> createState() => MapSampleState();
 }
-class MapSampleState extends State<MapsApp> {
+
+
+class MapSampleState extends State<MapsPage> {
   final Completer<GoogleMapController> _controller =
   Completer<GoogleMapController>();
-
+  var _maptheme;
   static const CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(25.6208, 85.1656),
-    zoom: 15,
+    target: LatLng(27.684812666392002, 85.31638349823855),
+    zoom: 20,
   );
 
   static const CameraPosition _kLake = CameraPosition(
@@ -24,11 +28,20 @@ class MapSampleState extends State<MapsApp> {
     zoom: 19.151926040649414,
   );
 
+  Future _loadMapStyles() async{
+    _maptheme = await rootBundle.loadString('raw/maptheme.json');
+  }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _loadMapStyles();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
-        mapType: MapType.satellite,
+        mapType: MapType.normal,
         initialCameraPosition: _kGooglePlex,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
