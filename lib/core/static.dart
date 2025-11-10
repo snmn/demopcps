@@ -1321,4 +1321,8 @@ class StaticValue{
   static Articles? clickedarticle;
   static String mapkey = "AIzaSyB6dg9Y5It-HF0K1fzuROsznUtbwUyZekw";
 
+  //esewa
+  static String clientId = "JB0BBQ4aD0UqIThFJwAKBgAXEUkEGQUBBAwdOgABHD4DChwUAB0R";
+  static String env = "dev";
+  static String secretKey = "BhwIWQQADhIYSxILExMcAgFXFhcOBwAKBgAXEQ==";
 }

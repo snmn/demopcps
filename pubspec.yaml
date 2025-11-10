@@ -40,6 +40,9 @@ dependencies:
   firebase_core:
   cloud_firestore:
   google_maps_flutter: ^2.14.0
+  url_launcher:
+  permission_handler:
+  esewa_flutter:
 
 
 dev_dependencies:
@@ -64,11 +67,11 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add images :
-    -to your application, add an images section, like this:
-      assets images/
-      - images/logo.png
-      - raw/
+  # To add images :-to your application, add an images section, like this:
+assets:
+  -images/
+  - images/logo.png
+  - raw/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

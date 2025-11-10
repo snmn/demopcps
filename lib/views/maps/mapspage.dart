@@ -3,6 +3,8 @@ import 'dart:async' show Completer;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MapsPage extends StatefulWidget {
   const MapsPage({super.key});
@@ -15,9 +17,9 @@ class MapsPage extends StatefulWidget {
 class MapSampleState extends State<MapsPage> {
   final Completer<GoogleMapController> _controller =
   Completer<GoogleMapController>();
-  var _maptheme;
+
   static const CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(27.684812666392002, 85.31638349823855),
+    target: LatLng(27.684650811368293, 85.31695516277365),
     zoom: 20,
   );
 
@@ -27,26 +29,53 @@ class MapSampleState extends State<MapsPage> {
     tilt: 59.440717697143555,
     zoom: 19.151926040649414,
   );
-
+  String? _maptheme;
   Future _loadMapStyles() async{
-    _maptheme = await rootBundle.loadString('raw/maptheme.json');
+    _maptheme = await (rootBundle.loadString('raw/maptheme.json')) as String?;
   }
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    requestpermission();
     _loadMapStyles();
+  }
+  requestpermission() async {
+  if( await Permission.location.request().isGranted){
+    //do nothing
+  }else{
+    Map<Permission,PermissionStatus > statuses = await [
+      Permission.location,
+      Permission.locationWhenInUse,
+      Permission.locationAlways,
+      Permission.accessMediaLocation
+    ].request();
+    print(statuses[Permission.location]);
+  }
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
-        mapType: MapType.normal,
         style: _maptheme,
         initialCameraPosition: _kGooglePlex,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
         },
+        markers: {
+           Marker(markerId: const MarkerId("PCPS"),
+          onTap: () async {
+            await launchUrl(
+              Uri(
+                path: "https://season.info.np"
+              )
+            );
+          }
+          ,position: const LatLng(27.684650811368293, 85.31695516277365),
+          infoWindow: const InfoWindow(
+            title: "PCPS College",
+            snippet: "https://www.google.com/maps/place/Patan+College+For+Professional+Studies/@27.6844602,85.3144361,693m/data=!3m2!1e3!4b1!4m6!3m5!1s0x39eb19b5ad9b8dff:0x12a4b82675e789a3!8m2!3d27.6844602!4d85.317011!16s%2Fg%2F11dxkz07qw?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+          ))
+        } ,
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _goToTheLake,

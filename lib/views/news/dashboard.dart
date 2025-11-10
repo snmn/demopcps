@@ -1,6 +1,7 @@
 import 'package:demopcps/api/newsapicall.dart';
 import 'package:demopcps/core/static.dart';
 import 'package:demopcps/model/newsapi.dart';
+import 'package:esewa_flutter/esewa_flutter.dart';
 import 'package:flutter/material.dart';
 
 import 'detailpage.dart';
@@ -17,19 +18,26 @@ class _dashboardState extends State<dashboard> {
   horizontalcard(size,heading, date, String url){
     return  Stack(
       children: [
-        Container(
-            margin: EdgeInsets.only(left: 15),
-            height: size.height/5,
-            width: size.width/1.5,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: Colors.black12,
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(15),
-              child: Image.network(url,
-                fit: BoxFit.cover,opacity: const AlwaysStoppedAnimation(.7),),
-            )),
+        GestureDetector(
+          onTap: (){
+
+
+
+          },
+          child: Container(
+              margin: EdgeInsets.only(left: 15),
+              height: size.height/5,
+              width: size.width/1.5,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.black12,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image.network(url,
+                  fit: BoxFit.cover,opacity: const AlwaysStoppedAnimation(.7),),
+              )),
+        ),
         Container(
           margin: EdgeInsets.only(left: 15),
           height: size.height/5,
@@ -193,6 +201,24 @@ class _dashboardState extends State<dashboard> {
               return const Center(child: CircularProgressIndicator());
             },
           ),
+
+          EsewaPayButton(
+        paymentConfig: ESewaConfig.dev(
+          amount: 100.0,
+          successUrl: 'https://developer.esewa.com.np/success',
+          failureUrl: 'https://developer.esewa.com.np/failure',
+          secretKey: StaticValue.secretKey,
+
+          // productCode: 'EPAYTEST', // optional for dev (defaults to EPAYTEST)
+        ),
+        onSuccess: (resp) {
+          // resp.data is base64 string
+          print('Success base64: ${resp.data}');
+        },
+        onFailure: (message) {
+          print('Failed: $message');
+        },
+      ),
           //vertical card
           FutureBuilder(
             future: _futurenewsapicall,
