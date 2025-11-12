@@ -1,8 +1,10 @@
 import 'package:demopcps/api/newsapicall.dart';
 import 'package:demopcps/core/static.dart';
 import 'package:demopcps/model/newsapi.dart';
+import 'package:demopcps/views/news/detailpagegrid.dart';
 import 'package:esewa_flutter/esewa_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'detailpage.dart';
 
@@ -14,13 +16,21 @@ class dashboard extends StatefulWidget {
 }
 
 class _dashboardState extends State<dashboard> {
-
+  Future<void> _launchInBrowser(Uri url) async {
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw Exception('Could not launch $url');
+    }
+  }
   horizontalcard(size,heading, date, String url){
     return  Stack(
       children: [
         GestureDetector(
           onTap: (){
-
+           var url = Uri(scheme: 'https', host: 'season.info.np', path: 'headers/');
+          _launchInBrowser(url);
 
 
           },
@@ -78,7 +88,7 @@ class _dashboardState extends State<dashboard> {
         StaticValue.clickedarticle = article;
         Navigator.of(context).push(
           MaterialPageRoute<void>(
-            builder: (context) => detailpage(),
+            builder: (context) => detailpagegrid(),
           ),
         );
       },
@@ -201,25 +211,25 @@ class _dashboardState extends State<dashboard> {
               return const Center(child: CircularProgressIndicator());
             },
           ),
-
-          EsewaPayButton(
-        paymentConfig: ESewaConfig.dev(
-          amount: 100.0,
-          successUrl: 'https://developer.esewa.com.np/success',
-          failureUrl: 'https://developer.esewa.com.np/failure',
-          secretKey: StaticValue.secretKey,
-
-          // productCode: 'EPAYTEST', // optional for dev (defaults to EPAYTEST)
-        ),
-        onSuccess: (resp) {
-          // resp.data is base64 string
-          print('Success base64: ${resp.data}');
-        },
-        onFailure: (message) {
-          print('Failed: $message');
-        },
-      ),
-          //vertical card
+      //
+      //     EsewaPayButton(
+      //   paymentConfig: ESewaConfig.dev(
+      //     amount: 100.0,
+      //     successUrl: 'https://developer.esewa.com.np/success',
+      //     failureUrl: 'https://developer.esewa.com.np/failure',
+      //     secretKey: StaticValue.secretKey,
+      //
+      //     // productCode: 'EPAYTEST', // optional for dev (defaults to EPAYTEST)
+      //   ),
+      //   onSuccess: (resp) {
+      //     // resp.data is base64 string
+      //     print('Success base64: ${resp.data}');
+      //   },
+      //   onFailure: (message) {
+      //     print('Failed: $message');
+      //   },
+      // ),
+      //     //vertical card
           FutureBuilder(
             future: _futurenewsapicall,
             builder: (context, AsyncSnapshot<Newsapi?> snapshot) {

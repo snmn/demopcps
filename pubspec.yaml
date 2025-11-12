@@ -43,6 +43,7 @@ dependencies:
   url_launcher:
   permission_handler:
   esewa_flutter:
+  webview_flutter:
 
 
 dev_dependencies:

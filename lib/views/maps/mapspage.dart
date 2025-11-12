@@ -47,7 +47,7 @@ class MapSampleState extends State<MapsPage> {
       Permission.location,
       Permission.locationWhenInUse,
       Permission.locationAlways,
-      Permission.accessMediaLocation
+      Permission.accessMediaLocation,
     ].request();
     print(statuses[Permission.location]);
   }
@@ -62,20 +62,17 @@ class MapSampleState extends State<MapsPage> {
           _controller.complete(controller);
         },
         markers: {
-           Marker(markerId: const MarkerId("PCPS"),
-          onTap: () async {
-            await launchUrl(
-              Uri(
-                path: "https://season.info.np"
-              )
-            );
-          }
-          ,position: const LatLng(27.684650811368293, 85.31695516277365),
-          infoWindow: const InfoWindow(
-            title: "PCPS College",
-            snippet: "https://www.google.com/maps/place/Patan+College+For+Professional+Studies/@27.6844602,85.3144361,693m/data=!3m2!1e3!4b1!4m6!3m5!1s0x39eb19b5ad9b8dff:0x12a4b82675e789a3!8m2!3d27.6844602!4d85.317011!16s%2Fg%2F11dxkz07qw?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
-          ))
-        } ,
+          const Marker(
+            markerId:  MarkerId("PCPS"),
+            position: LatLng(27.68506982015234, 85.31687928223276),
+            infoWindow: InfoWindow(
+              title: "PCPS College ",
+              snippet: "pcps.edu.np"
+
+            )
+          )
+        },
+       
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _goToTheLake,
