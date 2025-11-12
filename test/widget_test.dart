@@ -11,7 +11,9 @@
 // import 'package:demopcps/main.dart';
 //
 // void main() {
-//   demofunc();
+//   BuildContext context;
+//   var size = MediaQuery.of(context).size;
+//   demofunc(size,"sdd");
 //   // testWidgets('Counter increments smoke test', (WidgetTester tester) async {
 //   //   // Build our app and trigger a frame.
 //   //   await tester.pumpWidget(const MyApp());
