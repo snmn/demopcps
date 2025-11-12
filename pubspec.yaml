@@ -38,11 +38,18 @@ dependencies:
   cupertino_icons: ^1.0.6
   http: ^1.0.5
   firebase_core:
+  cloud_firestore:
+  google_maps_flutter: ^2.14.0
+  url_launcher:
+  permission_handler:
+  esewa_flutter:
+  webview_flutter:
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  webview_flutter:
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -61,10 +68,11 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add images to your application, add an images section, like this:
-  assets:
-    - images/
-    - images/logo.png
+  # To add images :-to your application, add an images section, like this:
+assets:
+  -images/
+  - images/logo.png
+  - raw/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,11 +1,15 @@
 import 'package:demopcps/views/chatapp/conversations.dart';
+import 'package:demopcps/views/esewatest/esewa.dart';
+import 'package:demopcps/views/maps/mapspage.dart';
 import 'package:demopcps/views/news/dashboard.dart';
+import 'package:demopcps/views/news/gridviewdashboard.dart';
+import 'package:demopcps/views/webview/webview.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:demopcps/firebase_options.dart';
-
-void main()  {
-   Firebase.initializeApp(
+Future<void> main()  async {
+    WidgetsFlutterBinding.ensureInitialized();
+   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const MyApp());
@@ -24,7 +28,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  Conversations(),
+      home:  gridviewdashboard(),
     );
   }
 }

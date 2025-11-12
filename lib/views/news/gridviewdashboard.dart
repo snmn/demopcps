@@ -6,16 +6,15 @@ import 'package:esewa_flutter/esewa_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'detailpage.dart';
 
-class dashboard extends StatefulWidget {
-  const dashboard({super.key});
+class gridviewdashboard extends StatefulWidget {
+  const gridviewdashboard({super.key});
 
   @override
-  State<dashboard> createState() => _dashboardState();
+  State<gridviewdashboard> createState() => _gridviewdashboardState();
 }
 
-class _dashboardState extends State<dashboard> {
+class _gridviewdashboardState extends State<gridviewdashboard> {
   Future<void> _launchInBrowser(Uri url) async {
     if (!await launchUrl(
       url,
@@ -29,8 +28,8 @@ class _dashboardState extends State<dashboard> {
       children: [
         GestureDetector(
           onTap: (){
-           var url = Uri(scheme: 'https', host: 'season.info.np', path: 'headers/');
-          _launchInBrowser(url);
+            var url = Uri(scheme: 'https', host: 'season.info.np', path: 'headers/');
+            _launchInBrowser(url);
 
 
           },
@@ -193,14 +192,17 @@ class _dashboardState extends State<dashboard> {
                     Newsapi? data  = snapshot.data;
                     List<Articles> articles = data!.articles!;
                     return Container(
-                      height: size.height/5,
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
+                      height: size.height/2,
+                      child: GridView.builder(
+                        scrollDirection: Axis.vertical,
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                        ),
                         itemCount: articles.length,
                         itemBuilder: (BuildContext context, int index) {
-                         return horizontalcard(size, articles[index].title,
-                             articles[index].publishedAt,
-                             articles[index].urlToImage!);
+                          return horizontalcard(size, articles[index].title,
+                              articles[index].publishedAt,
+                              articles[index].urlToImage!);
                         },
                       ),
                     );
@@ -211,25 +213,25 @@ class _dashboardState extends State<dashboard> {
               return const Center(child: CircularProgressIndicator());
             },
           ),
-      //
-      //     EsewaPayButton(
-      //   paymentConfig: ESewaConfig.dev(
-      //     amount: 100.0,
-      //     successUrl: 'https://developer.esewa.com.np/success',
-      //     failureUrl: 'https://developer.esewa.com.np/failure',
-      //     secretKey: StaticValue.secretKey,
-      //
-      //     // productCode: 'EPAYTEST', // optional for dev (defaults to EPAYTEST)
-      //   ),
-      //   onSuccess: (resp) {
-      //     // resp.data is base64 string
-      //     print('Success base64: ${resp.data}');
-      //   },
-      //   onFailure: (message) {
-      //     print('Failed: $message');
-      //   },
-      // ),
-      //     //vertical card
+          //
+          //     EsewaPayButton(
+          //   paymentConfig: ESewaConfig.dev(
+          //     amount: 100.0,
+          //     successUrl: 'https://developer.esewa.com.np/success',
+          //     failureUrl: 'https://developer.esewa.com.np/failure',
+          //     secretKey: StaticValue.secretKey,
+          //
+          //     // productCode: 'EPAYTEST', // optional for dev (defaults to EPAYTEST)
+          //   ),
+          //   onSuccess: (resp) {
+          //     // resp.data is base64 string
+          //     print('Success base64: ${resp.data}');
+          //   },
+          //   onFailure: (message) {
+          //     print('Failed: $message');
+          //   },
+          // ),
+          //     //vertical card
           FutureBuilder(
             future: _futurenewsapicall,
             builder: (context, AsyncSnapshot<Newsapi?> snapshot) {
