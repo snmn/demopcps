@@ -1,0 +1,274 @@
+import 'package:demopcps/api/newsapicall.dart';
+import 'package:demopcps/core/static.dart';
+import 'package:demopcps/model/newsapi.dart';
+import 'package:demopcps/views/news/detailpagegrid.dart';
+import 'package:esewa_flutter/esewa_flutter.dart';
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
+class gridviewdashboard extends StatefulWidget {
+  const gridviewdashboard({super.key});
+
+  @override
+  State<gridviewdashboard> createState() => _gridviewdashboardState();
+}
+
+class _gridviewdashboardState extends State<gridviewdashboard> {
+  Future<void> _launchInBrowser(Uri url) async {
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw Exception('Could not launch $url');
+    }
+  }
+  horizontalcard(size,heading, date, String url){
+    return  Stack(
+      children: [
+        GestureDetector(
+          onTap: (){
+            var url = Uri(scheme: 'https', host: 'season.info.np', path: 'headers/');
+            _launchInBrowser(url);
+
+
+          },
+          child: Container(
+              margin: EdgeInsets.only(left: 15),
+              height: size.height/5,
+              width: size.width/1.5,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Colors.black12,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image.network(url,
+                  fit: BoxFit.cover,opacity: const AlwaysStoppedAnimation(.7),),
+              )),
+        ),
+        Container(
+          margin: EdgeInsets.only(left: 15),
+          height: size.height/5,
+          width: size.width/1.5,
+          decoration: BoxDecoration(
+            color: Colors.black26,
+            borderRadius: BorderRadius.circular(15),
+
+          ),
+        ),
+        Positioned(
+          bottom: 15,left: 25,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: size.width/1.9,
+                child: Text(heading,style: TextStyle(color: Colors.white,
+                  fontSize: 18,fontWeight: FontWeight.bold,),
+                  overflow: TextOverflow.ellipsis,maxLines: 2,),
+              ),
+              Text(date,style: TextStyle(color: Colors.white,
+                fontSize: 14,fontWeight: FontWeight.normal,),),
+            ],
+          ),
+        ),
+        Positioned(
+            right: 15,bottom: 15,
+            child: Icon(Icons.play_circle,size: 35,color: Colors.white,))
+      ],
+    );
+  }
+
+  verticalcard(size, String heading,author, date, String url,
+      Articles? article ){
+    return GestureDetector(
+      onTap: (){
+        StaticValue.clickedarticle = article;
+        Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (context) => detailpagegrid(),
+          ),
+        );
+      },
+      child: Container(
+        padding: EdgeInsets.only(top: 10,left: 10),
+        child: Row(
+          children: [
+            Stack(
+              children: [
+                Container(
+                    height: 100,
+                    width: 150,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15)
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.network(url,
+                        fit: BoxFit.cover,),
+                    )),
+                Container(
+                  height: 100,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    // color: Colors.green,
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: Center(
+                    child: Icon(Icons.play_circle,size: 40,color: Colors.white,),
+                  ),
+                ),
+
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: size.width/2,
+                  padding: EdgeInsets.only(left: 15),
+                  child: Text(heading,
+                    style: TextStyle(color: Colors.black,
+                        fontSize: 16,fontWeight: FontWeight.bold),
+                    overflow: TextOverflow.ellipsis,maxLines: 2,),
+                ),
+                SizedBox(height: 10,),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    author == ""?Container():Container(
+                      width: 100,
+                      margin: EdgeInsets.only(left: 10),
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(15)
+                      ),
+                      padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+                      child: Text(author,style: TextStyle(color: Colors.white),maxLines: 1,),
+                    ),
+                    SizedBox(width: 15,),
+                    Container(width: 80,child: Text(date,style: TextStyle(color: Colors.black),maxLines: 1,))
+                  ],
+                )
+              ],
+            )
+
+          ],
+        ),
+      ),
+    );
+  }
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    apicall();
+  }
+  Future<Newsapi?>? _futurenewsapicall;
+  apicall(){
+    _futurenewsapicall = newsApiCall().getapicall();
+  }
+  @override
+  Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Column(
+        children: [
+          SizedBox(height: 45,),
+          FutureBuilder(
+            future: _futurenewsapicall,
+            builder: (context, AsyncSnapshot<Newsapi?> snapshot) {
+              switch (snapshot.connectionState) {
+                case ConnectionState.none:
+                case ConnectionState.active:
+                case ConnectionState.waiting:
+                case ConnectionState.done:
+                  if(snapshot.hasData){
+                    //parse data
+                    Newsapi? data  = snapshot.data;
+                    List<Articles> articles = data!.articles!;
+                    return Container(
+                      height: size.height/2,
+                      child: GridView.builder(
+                        scrollDirection: Axis.vertical,
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                        ),
+                        itemCount: articles.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return horizontalcard(size, articles[index].title,
+                              articles[index].publishedAt,
+                              articles[index].urlToImage!);
+                        },
+                      ),
+                    );
+                  }else{
+                    return Text("No data available");
+                  }
+              }
+              return const Center(child: CircularProgressIndicator());
+            },
+          ),
+          //
+          //     EsewaPayButton(
+          //   paymentConfig: ESewaConfig.dev(
+          //     amount: 100.0,
+          //     successUrl: 'https://developer.esewa.com.np/success',
+          //     failureUrl: 'https://developer.esewa.com.np/failure',
+          //     secretKey: StaticValue.secretKey,
+          //
+          //     // productCode: 'EPAYTEST', // optional for dev (defaults to EPAYTEST)
+          //   ),
+          //   onSuccess: (resp) {
+          //     // resp.data is base64 string
+          //     print('Success base64: ${resp.data}');
+          //   },
+          //   onFailure: (message) {
+          //     print('Failed: $message');
+          //   },
+          // ),
+          //     //vertical card
+          FutureBuilder(
+            future: _futurenewsapicall,
+            builder: (context, AsyncSnapshot<Newsapi?> snapshot) {
+              switch (snapshot.connectionState) {
+                case ConnectionState.none:
+                case ConnectionState.active:
+                case ConnectionState.waiting:
+                case ConnectionState.done:
+                  if(snapshot.hasData){
+                    //parse data
+                    Newsapi? data  = snapshot.data;
+                    List<Articles> articles = data!.articles!;
+                    return Container(
+                      height: size.height/1.4,
+                      child: ListView.builder(
+                        scrollDirection: Axis.vertical,
+                        itemCount: articles.length,
+                        padding: EdgeInsets.zero,
+                        itemBuilder: (BuildContext context, int index) {
+                          return verticalcard(size, articles[index].title!,
+                              articles[index].author,articles[index].publishedAt,
+                              articles[index].urlToImage!,
+                              articles[index]);
+                          //String heading,author, date, String url
+                        },
+                      ),
+                    );
+                  }else{
+                    return Text("No data available");
+                  }
+              }
+              return const Center(child: CircularProgressIndicator());
+            },
+          ),
+
+        ],
+      ),
+    );
+  }
+}
