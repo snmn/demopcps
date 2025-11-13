@@ -8,6 +8,10 @@ class loginpage extends StatefulWidget{
   }
 }
 class loginpageState extends State<loginpage>{
+  TextEditingController _phonenumber = new TextEditingController();
+  TextEditingController _password = new TextEditingController();
+  
+  
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size; // screen size
@@ -21,7 +25,7 @@ class loginpageState extends State<loginpage>{
          children: [
            Icon(Icons.person,size: 50,color: Colors.black,),
            Container(
-             height: size.height/3,
+             height: size.height/2.5,
              width: size.width/1.1,
              padding: EdgeInsets.all(25),
              decoration: BoxDecoration(
@@ -32,35 +36,60 @@ class loginpageState extends State<loginpage>{
                mainAxisAlignment: MainAxisAlignment.center,
                crossAxisAlignment: CrossAxisAlignment.start,
                children: [
-                 Text("Signin",style: TextStyle(color: Colors.white,fontSize: 20),),
+                 Text("Signin",style: TextStyle(color: Colors.white,fontSize: 40),),
+                 Text("Phone Number",
+                   style: TextStyle(color: Colors.black,
+                       fontSize: 14),),
                  Container(
                    width: size.width/1.2,
                    margin: EdgeInsets.all(5),
-                   padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.only(left: 10),
                    decoration: BoxDecoration(
                      color: Colors.white
+                         ,borderRadius:BorderRadius.circular(10)
                    ),
-                   child: Text("Email/Phone Number"),
+                   child: TextField(
+                     controller: _phonenumber,
+                     keyboardType: TextInputType.number,
+                     decoration: const InputDecoration(border: InputBorder.none ),
+                     style: const TextStyle(color: Colors.black,),
+                     maxLines: 1,
+
+                   ),
                  ),
+                 Text("Password",
+                   style: TextStyle(color: Colors.black,
+                       fontSize: 14),),
                  Container(
                    width: size.width/1.2,
                    margin: EdgeInsets.all(5),
-                   padding: EdgeInsets.all(15),
+                   padding: EdgeInsets.only(left: 10),
                    decoration: BoxDecoration(
                        color: Colors.white
+                       ,borderRadius:BorderRadius.circular(10)
                    ),
-                   child: Text("Password"),
+                   child: TextField(
+                     controller: _password,
+                     obscureText: true,
+                     keyboardType: TextInputType.text,
+                     decoration: const InputDecoration(border: InputBorder.none ),
+                     style: const TextStyle(color: Colors.black,),
+                     maxLines: 1,
+
+                   ),
                  ),
                  Row(
                    mainAxisAlignment: MainAxisAlignment.center,
                    children: [
                      Container(
-                       margin: EdgeInsets.all(5),
-                       padding: EdgeInsets.all(15),
+                       margin: EdgeInsets.all(15),
+                       padding: EdgeInsets.only(left:20,right: 20,top: 10,bottom: 10),
                        decoration: BoxDecoration(
-                           color: Colors.brown
+                           color: Colors.brown,
+                         borderRadius: BorderRadius.circular(15)
                        ),
-                       child: Text("Login",style: TextStyle(color: Colors.white),),
+                       child: Text("Login",style: TextStyle(color: Colors.white,
+                       fontSize: 16,fontWeight: FontWeight.bold),),
                      ),
                    ],
                  )

@@ -1,3 +1,4 @@
+import 'package:demopcps/routes.dart';
 import 'package:demopcps/views/chatapp/conversations.dart';
 import 'package:demopcps/views/esewatest/esewa.dart';
 import 'package:demopcps/views/maps/mapspage.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  gridviewdashboard(),
+      initialRoute: AppRoute.loginroute,
+      routes: AppRoute.getAppRoutes(),
     );
   }
 }
