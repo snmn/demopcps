@@ -17,6 +17,7 @@ class AppRoute{
   static const String conversationpage = '/conversation';
 
   static getAppRoutes()=>{
+
     loginpageroute: (context) => loginpage(),
     dashboardPageroute: (context) => const dashboard(),
     detailpageroute: (context) =>  const detailpage(),
