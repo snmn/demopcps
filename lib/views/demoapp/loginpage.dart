@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class loginpage extends StatefulWidget{
   @override
@@ -11,7 +12,13 @@ class loginpageState extends State<loginpage>{
   TextEditingController _phonenumber = new TextEditingController();
   TextEditingController _password = new TextEditingController();
   
-  
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    // readfromstorage();
+  }
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size; // screen size
@@ -81,15 +88,18 @@ class loginpageState extends State<loginpage>{
                  Row(
                    mainAxisAlignment: MainAxisAlignment.center,
                    children: [
-                     Container(
-                       margin: EdgeInsets.all(15),
-                       padding: EdgeInsets.only(left:20,right: 20,top: 10,bottom: 10),
-                       decoration: BoxDecoration(
-                           color: Colors.brown,
-                         borderRadius: BorderRadius.circular(15)
+                     Center(
+
+                       child: Container(
+                         margin: EdgeInsets.all(15),
+                         padding: EdgeInsets.only(left:20,right: 20,top: 10,bottom: 10),
+                         decoration: BoxDecoration(
+                             color: Colors.brown,
+                           borderRadius: BorderRadius.circular(15)
+                         ),
+                         child: Text("Login",style: TextStyle(color: Colors.white,
+                         fontSize: 16,fontWeight: FontWeight.bold),),
                        ),
-                       child: Text("Login",style: TextStyle(color: Colors.white,
-                       fontSize: 16,fontWeight: FontWeight.bold),),
                      ),
                    ],
                  )
