@@ -35,7 +35,7 @@ class _dashboardState extends State<dashboard> {
 
           },
           child: Container(
-              margin: EdgeInsets.only(left: 15),
+              margin: const EdgeInsets.only(left: 15),
               height: size.height/5,
               width: size.width/1.5,
               decoration: BoxDecoration(
@@ -49,7 +49,7 @@ class _dashboardState extends State<dashboard> {
               )),
         ),
         Container(
-          margin: EdgeInsets.only(left: 15),
+          margin: const EdgeInsets.only(left: 15),
           height: size.height/5,
           width: size.width/1.5,
           decoration: BoxDecoration(
@@ -65,16 +65,16 @@ class _dashboardState extends State<dashboard> {
             children: [
               Container(
                 width: size.width/1.9,
-                child: Text(heading,style: TextStyle(color: Colors.white,
+                child: Text(heading,style: const TextStyle(color: Colors.white,
                   fontSize: 18,fontWeight: FontWeight.bold,),
                   overflow: TextOverflow.ellipsis,maxLines: 2,),
               ),
-              Text(date,style: TextStyle(color: Colors.white,
+              Text(date,style: const TextStyle(color: Colors.white,
                 fontSize: 14,fontWeight: FontWeight.normal,),),
             ],
           ),
         ),
-        Positioned(
+        const Positioned(
             right: 15,bottom: 15,
             child: Icon(Icons.play_circle,size: 35,color: Colors.white,))
       ],
@@ -85,15 +85,15 @@ class _dashboardState extends State<dashboard> {
       Articles? article ){
     return GestureDetector(
       onTap: (){
-        StaticValue.clickedarticle = article;
+        staticfile.clickedarticle = article;
         Navigator.of(context).push(
           MaterialPageRoute<void>(
-            builder: (context) => detailpagegrid(),
+            builder: (context) => const detailpagegrid(),
           ),
         );
       },
       child: Container(
-        padding: EdgeInsets.only(top: 10,left: 10),
+        padding: const EdgeInsets.only(top: 10,left: 10),
         child: Row(
           children: [
             Stack(
@@ -116,7 +116,7 @@ class _dashboardState extends State<dashboard> {
                     // color: Colors.green,
                       borderRadius: BorderRadius.circular(15)
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Icon(Icons.play_circle,size: 40,color: Colors.white,),
                   ),
                 ),
@@ -128,29 +128,29 @@ class _dashboardState extends State<dashboard> {
               children: [
                 Container(
                   width: size.width/2,
-                  padding: EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 15),
                   child: Text(heading,
-                    style: TextStyle(color: Colors.black,
+                    style: const TextStyle(color: Colors.black,
                         fontSize: 16,fontWeight: FontWeight.bold),
                     overflow: TextOverflow.ellipsis,maxLines: 2,),
                 ),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     author == ""?Container():Container(
                       width: 100,
-                      margin: EdgeInsets.only(left: 10),
+                      margin: const EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(
                           color: Colors.red,
                           borderRadius: BorderRadius.circular(15)
                       ),
-                      padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
-                      child: Text(author,style: TextStyle(color: Colors.white),maxLines: 1,),
+                      padding: const EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+                      child: Text(author,style: const TextStyle(color: Colors.white),maxLines: 1,),
                     ),
-                    SizedBox(width: 15,),
-                    Container(width: 80,child: Text(date,style: TextStyle(color: Colors.black),maxLines: 1,))
+                    const SizedBox(width: 15,),
+                    Container(width: 80,child: Text(date,style: const TextStyle(color: Colors.black),maxLines: 1,))
                   ],
                 )
               ],
@@ -169,9 +169,9 @@ class _dashboardState extends State<dashboard> {
     super.initState();
     apicall();
   }
-  Future<Newsapi?>? _futurenewsapicall;
+  Future<newsapi?>? _futurenewsapicall;
   apicall(){
-    _futurenewsapicall = newsApiCall().getapicall();
+    _futurenewsapicall = newsapicall().getnewsapidata();
   }
   @override
   Widget build(BuildContext context) {
@@ -179,7 +179,7 @@ class _dashboardState extends State<dashboard> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 45,),
+          const SizedBox(height: 45,),
           FutureBuilder(
             future: _futurenewsapicall,
             builder: (context, AsyncSnapshot<Newsapi?> snapshot) {
@@ -205,7 +205,7 @@ class _dashboardState extends State<dashboard> {
                       ),
                     );
                   }else{
-                    return Text("No data available");
+                    return const Text("No data available");
                   }
               }
               return const Center(child: CircularProgressIndicator());
@@ -258,7 +258,7 @@ class _dashboardState extends State<dashboard> {
                       ),
                     );
                   }else{
-                    return Text("No data available");
+                    return const Text("No data available");
                   }
               }
               return const Center(child: CircularProgressIndicator());

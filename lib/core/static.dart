@@ -1,4 +1,4 @@
-import 'package:demopcps/model/newsapimodel.dart';
+import 'package:demopcps/model/newsapi.dart';
 
 class staticfile{
   //https://newsapi.org/v2/everything

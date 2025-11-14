@@ -11,7 +11,7 @@ class newsapicall{
   //https://newsapi.org/v2/everything
   // ?q=tesla&from=2025-09-28
   // &sortBy=publishedAt&apiKey=a25a0c0b883c4f389ff5c23da0f9dfea
-  Future<newsapi?> getnewsapidata() async {
+  Future<newsapi?>? getnewsapidata() async {
     try{
       var url = Uri.https(staticfile.baseurl,
           staticfile.path,
