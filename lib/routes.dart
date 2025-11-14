@@ -3,8 +3,8 @@ import 'package:demopcps/views/chatapp/conversations.dart';
 import 'package:demopcps/views/demoapp/loginpage.dart';
 import 'package:demopcps/views/esewatest/esewa.dart';
 import 'package:demopcps/views/maps/mapspage.dart';
-import 'package:demopcps/views/news/dashboard.dart';
-import 'package:demopcps/views/news/detailpage.dart';
+// import 'package:demopcps/views/news/dashboard.dart';
+// import 'package:demopcps/views/news/detailpage.dart';
 
 class AppRoute{
   AppRoute._();
@@ -19,8 +19,8 @@ class AppRoute{
   static getAppRoutes()=>{
 
     loginpageroute: (context) => loginpage(),
-    dashboardPageroute: (context) => const dashboard(),
-    detailpageroute: (context) =>  const detailpage(),
+    // dashboardPageroute: (context) => const dashboard(),
+    // detailpageroute: (context) =>  const detailpage(),
     mapspage: (context) => const MapsPage(),
     esewa : (context) => const EsewaApp(title: "PCPS"),
     chatpage: (context) => const Chats(),

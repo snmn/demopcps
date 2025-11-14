@@ -1,12 +1,12 @@
 import 'package:demopcps/api/newsapicall.dart';
 import 'package:demopcps/core/static.dart';
 import 'package:demopcps/model/newsapi.dart';
-import 'package:demopcps/views/news/detailpagegrid.dart';
 import 'package:esewa_flutter/esewa_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'detailpage.dart';
+import 'detailpagegrid.dart';
 
 class dashboard extends StatefulWidget {
   const dashboard({super.key});
@@ -29,13 +29,13 @@ class _dashboardState extends State<dashboard> {
       children: [
         GestureDetector(
           onTap: (){
-           var url = Uri(scheme: 'https', host: 'season.info.np', path: 'headers/');
-          _launchInBrowser(url);
+            var url = Uri(scheme: 'https', host: 'season.info.np', path: 'headers/');
+            _launchInBrowser(url);
 
 
           },
           child: Container(
-              margin: const EdgeInsets.only(left: 15),
+              margin: EdgeInsets.only(left: 15),
               height: size.height/5,
               width: size.width/1.5,
               decoration: BoxDecoration(
@@ -49,7 +49,7 @@ class _dashboardState extends State<dashboard> {
               )),
         ),
         Container(
-          margin: const EdgeInsets.only(left: 15),
+          margin: EdgeInsets.only(left: 15),
           height: size.height/5,
           width: size.width/1.5,
           decoration: BoxDecoration(
@@ -65,16 +65,16 @@ class _dashboardState extends State<dashboard> {
             children: [
               Container(
                 width: size.width/1.9,
-                child: Text(heading,style: const TextStyle(color: Colors.white,
+                child: Text(heading,style: TextStyle(color: Colors.white,
                   fontSize: 18,fontWeight: FontWeight.bold,),
                   overflow: TextOverflow.ellipsis,maxLines: 2,),
               ),
-              Text(date,style: const TextStyle(color: Colors.white,
+              Text(date,style: TextStyle(color: Colors.white,
                 fontSize: 14,fontWeight: FontWeight.normal,),),
             ],
           ),
         ),
-        const Positioned(
+        Positioned(
             right: 15,bottom: 15,
             child: Icon(Icons.play_circle,size: 35,color: Colors.white,))
       ],
@@ -85,15 +85,15 @@ class _dashboardState extends State<dashboard> {
       Articles? article ){
     return GestureDetector(
       onTap: (){
-        staticfile.clickedarticle = article;
+        StaticValue.clickedarticle = article;
         Navigator.of(context).push(
           MaterialPageRoute<void>(
-            builder: (context) => const detailpagegrid(),
+            builder: (context) => detailpagegrid(),
           ),
         );
       },
       child: Container(
-        padding: const EdgeInsets.only(top: 10,left: 10),
+        padding: EdgeInsets.only(top: 10,left: 10),
         child: Row(
           children: [
             Stack(
@@ -116,7 +116,7 @@ class _dashboardState extends State<dashboard> {
                     // color: Colors.green,
                       borderRadius: BorderRadius.circular(15)
                   ),
-                  child: const Center(
+                  child: Center(
                     child: Icon(Icons.play_circle,size: 40,color: Colors.white,),
                   ),
                 ),
@@ -128,29 +128,29 @@ class _dashboardState extends State<dashboard> {
               children: [
                 Container(
                   width: size.width/2,
-                  padding: const EdgeInsets.only(left: 15),
+                  padding: EdgeInsets.only(left: 15),
                   child: Text(heading,
-                    style: const TextStyle(color: Colors.black,
+                    style: TextStyle(color: Colors.black,
                         fontSize: 16,fontWeight: FontWeight.bold),
                     overflow: TextOverflow.ellipsis,maxLines: 2,),
                 ),
-                const SizedBox(height: 10,),
+                SizedBox(height: 10,),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     author == ""?Container():Container(
                       width: 100,
-                      margin: const EdgeInsets.only(left: 10),
+                      margin: EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(
                           color: Colors.red,
                           borderRadius: BorderRadius.circular(15)
                       ),
-                      padding: const EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
-                      child: Text(author,style: const TextStyle(color: Colors.white),maxLines: 1,),
+                      padding: EdgeInsets.only(left: 15,right: 15,top: 10,bottom: 10),
+                      child: Text(author,style: TextStyle(color: Colors.white),maxLines: 1,),
                     ),
-                    const SizedBox(width: 15,),
-                    Container(width: 80,child: Text(date,style: const TextStyle(color: Colors.black),maxLines: 1,))
+                    SizedBox(width: 15,),
+                    Container(width: 80,child: Text(date,style: TextStyle(color: Colors.black),maxLines: 1,))
                   ],
                 )
               ],
@@ -169,9 +169,9 @@ class _dashboardState extends State<dashboard> {
     super.initState();
     apicall();
   }
-  Future<newsapi?>? _futurenewsapicall;
+  Future<Newsapi?>? _futurenewsapicall;
   apicall(){
-    _futurenewsapicall = newsapicall().getnewsapidata();
+    _futurenewsapicall = newsApiCall().getapicall();
   }
   @override
   Widget build(BuildContext context) {
@@ -179,7 +179,7 @@ class _dashboardState extends State<dashboard> {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(height: 45,),
+          SizedBox(height: 45,),
           FutureBuilder(
             future: _futurenewsapicall,
             builder: (context, AsyncSnapshot<Newsapi?> snapshot) {
@@ -198,38 +198,38 @@ class _dashboardState extends State<dashboard> {
                         scrollDirection: Axis.horizontal,
                         itemCount: articles.length,
                         itemBuilder: (BuildContext context, int index) {
-                         return horizontalcard(size, articles[index].title,
-                             articles[index].publishedAt,
-                             articles[index].urlToImage!);
+                          return horizontalcard(size, articles[index].title,
+                              articles[index].publishedAt,
+                              articles[index].urlToImage!);
                         },
                       ),
                     );
                   }else{
-                    return const Text("No data available");
+                    return Text("No data available");
                   }
               }
               return const Center(child: CircularProgressIndicator());
             },
           ),
-      //
-      //     EsewaPayButton(
-      //   paymentConfig: ESewaConfig.dev(
-      //     amount: 100.0,
-      //     successUrl: 'https://developer.esewa.com.np/success',
-      //     failureUrl: 'https://developer.esewa.com.np/failure',
-      //     secretKey: StaticValue.secretKey,
-      //
-      //     // productCode: 'EPAYTEST', // optional for dev (defaults to EPAYTEST)
-      //   ),
-      //   onSuccess: (resp) {
-      //     // resp.data is base64 string
-      //     print('Success base64: ${resp.data}');
-      //   },
-      //   onFailure: (message) {
-      //     print('Failed: $message');
-      //   },
-      // ),
-      //     //vertical card
+          //
+          //     EsewaPayButton(
+          //   paymentConfig: ESewaConfig.dev(
+          //     amount: 100.0,
+          //     successUrl: 'https://developer.esewa.com.np/success',
+          //     failureUrl: 'https://developer.esewa.com.np/failure',
+          //     secretKey: StaticValue.secretKey,
+          //
+          //     // productCode: 'EPAYTEST', // optional for dev (defaults to EPAYTEST)
+          //   ),
+          //   onSuccess: (resp) {
+          //     // resp.data is base64 string
+          //     print('Success base64: ${resp.data}');
+          //   },
+          //   onFailure: (message) {
+          //     print('Failed: $message');
+          //   },
+          // ),
+          //     //vertical card
           FutureBuilder(
             future: _futurenewsapicall,
             builder: (context, AsyncSnapshot<Newsapi?> snapshot) {
@@ -258,7 +258,7 @@ class _dashboardState extends State<dashboard> {
                       ),
                     );
                   }else{
-                    return const Text("No data available");
+                    return Text("No data available");
                   }
               }
               return const Center(child: CircularProgressIndicator());

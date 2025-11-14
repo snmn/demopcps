@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:demopcps/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,14 +11,50 @@ class loginpage extends StatefulWidget{
 class loginpageState extends State<loginpage>{
   TextEditingController _phonenumber = new TextEditingController();
   TextEditingController _password = new TextEditingController();
-  
-
+  bool isloading = false;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    // readfromstorage();
+    readfromstorage();
   }
+  readfromstorage() async {
+    isloading =true;
+    final SharedPreferences prefs =
+    await SharedPreferences.getInstance();
+    var phonenumber = prefs.getString("phonenumber");
+    var password = prefs.getString("password");
+    if(phonenumber != null && password != null){
+      setState(() {
+        _phonenumber.text =phonenumber;
+        _password.text = password;
+      });
+      Navigator.of(context).pushNamed(AppRoute.conversationpage);
+
+
+    }   else{
+      setState(() {
+        isloading = false;
+      });
+    }
+  }
+  storeinstorage() async {
+    setState(() {
+      isloading = true;
+    });
+    final SharedPreferences prefs =
+    await SharedPreferences.getInstance();
+    prefs.setString("phonenumber", _phonenumber.text);
+    prefs.setString("password", _password.text);
+
+
+    setState(() {
+      isloading = false;
+    });
+
+
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size; // screen size
@@ -82,13 +118,26 @@ class loginpageState extends State<loginpage>{
                      decoration: const InputDecoration(border: InputBorder.none ),
                      style: const TextStyle(color: Colors.black,),
                      maxLines: 1,
+                     onSubmitted: (txt){
+                       if(_phonenumber.text != null && _password != null){
+                         storeinstorage();
+                         Navigator.of(context).pushNamed(AppRoute.conversationpage);
+                       }
+                     },
 
                    ),
                  ),
                  Row(
                    mainAxisAlignment: MainAxisAlignment.center,
                    children: [
-                     Center(
+                     isloading?const CircularProgressIndicator():
+                     GestureDetector(
+                       onTap: (){
+                         if(_phonenumber.text != null && _password != null){
+                           storeinstorage();
+                           Navigator.of(context).pushNamed(AppRoute.conversationpage);
+                         }
+                       },
 
                        child: Container(
                          margin: EdgeInsets.all(15),
