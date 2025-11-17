@@ -29,13 +29,17 @@ class loginpageState extends State<loginpage>{
         _phonenumber.text =phonenumber;
         _password.text = password;
       });
-      Navigator.of(context).pushNamed(AppRoute.conversationpage);
-
-
+      Future.delayed(const Duration(
+          seconds: 1)).whenComplete((){
+        Navigator.of(context).
+        pushNamed(AppRoute.conversationpage);
+      });
     }   else{
       setState(() {
         isloading = false;
       });
+
+
     }
   }
   storeinstorage() async {

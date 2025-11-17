@@ -29,9 +29,6 @@ class loginpageState extends State<loginpage>{
         _phonenumber.text =phonenumber;
         _password.text = password;
       });
-      Navigator.of(context).pushNamed(AppRoute.conversationpage);
-
-
     }   else{
       setState(() {
         isloading = false;
@@ -121,7 +118,7 @@ class loginpageState extends State<loginpage>{
                       onSubmitted: (txt){
                         if(_phonenumber.text != null && _password != null){
                           storeinstorage();
-                          Navigator.of(context).pushNamed(AppRoute.conversationpage);
+                          Navigator.of(context).pushNamed(AppRoute.loginpageroute);
                         }
                       },
 
@@ -135,7 +132,7 @@ class loginpageState extends State<loginpage>{
                         onTap: (){
                           if(_phonenumber.text != null && _password != null){
                             storeinstorage();
-                            Navigator.of(context).pushNamed(AppRoute.conversationpage);
+                            Navigator.of(context).pushNamed(AppRoute.loginpageroute);
                           }
                         },
 

@@ -45,7 +45,8 @@ dependencies:
   esewa_flutter:
   webview_flutter:
   shared_preferences:
-
+  firebase_messaging:
+  awesome_notifications:
 
 dev_dependencies:
   flutter_test:
