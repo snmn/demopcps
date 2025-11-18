@@ -18,7 +18,6 @@ async {
   await setupFlutterNotifications();
 }
 bool isFlutterLocalNotificationsInitialized = false;
-
 Future<void> setupFlutterNotifications() async {
   if (isFlutterLocalNotificationsInitialized) {
     return;
@@ -58,7 +57,6 @@ Future<void> main()  async {
       );
       print('User granted permission: ${settings.authorizationStatus}');
     }
-
     AwesomeNotifications()
         .initialize("resource://drawable/logo", [
       NotificationChannel(

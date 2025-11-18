@@ -20,12 +20,8 @@ class Gridapp extends StatefulWidget {
 }
 class _GridappState extends State<Gridapp> {
   List<Griddata> gridstring = Griddata.values;
-  void notify(
-      String? title,
-      String? body,
-      String? image, {
-        Map<String, String>? payload,
-      }) async {
+  void notify(String? title, String? body, String? image,
+      {Map<String, String>? payload,}) async {
     await AwesomeNotifications().createNotification(
       content: NotificationContent(
         id: 65,
@@ -64,15 +60,8 @@ class _GridappState extends State<Gridapp> {
   }
 
   listen() async {
-    // 🚀 Terminated state
-    FirebaseMessaging.instance.getInitialMessage().then((message) {
-    });
-
-    // 📥 Background → Foreground
-    FirebaseMessaging.onMessageOpenedApp.listen((message) {
-
-    });
-
+    FirebaseMessaging.instance.getInitialMessage().then((message) {});
+    FirebaseMessaging.onMessageOpenedApp.listen((message) {});
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       final Map<String, String> payload = message.data.map(
             (k, v) => MapEntry(k, v.toString()),
@@ -92,19 +81,11 @@ class _GridappState extends State<Gridapp> {
           notifyIOS(notification.title!, notification.body!, payload: payload);
           setState(() {});
         }
-      } else {
       }
     });
-
-    // Handle notification taps when app is opened from background
     FirebaseMessaging.instance.getInitialMessage().then((
         RemoteMessage? message,
-        ) {
-      if (message != null) {
-      }
-    });
-
-
+        ) {});
   }
 
   @override
